@@ -1,7 +1,7 @@
 # Random Walk
 ## What is Random Walk?
 A random walk is a mmathematical concept that describes a path consisting of a succession of random steps.
-/br In simplest form, a random walk is the process where, at each step, the position moves either up or down with equal probability. 
+<br /> In simplest form, a random walk is the process where, at each step, the position moves either up or down with equal probability. 
 This concept is widely used in various fields, including physics, biology, economics, and finance.
 ```
 import numpy as np
