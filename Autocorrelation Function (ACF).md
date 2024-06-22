@@ -25,8 +25,43 @@ where
 - $c_0$ is the sample variance.<br />
 
 Here's an example with numbers: <br />
-Let's consider the same time series $$X_t$ = {5, 7, 9, 6, 8, 10}.
+Let's consider the same time series $X_t$ = {5, 7, 9, 6, 8, 10}.
 We previously calculated the autocovariance at lag $1$ as $γ$(1) = 0.4.
 The variance of the time series (autocovariance at lag 0) is $γ$(0) = 4.
 Therefore, the autocorrelation coefficient at lag 1 is:
 $ρ_1 = γ(1) / γ(0)$ = 0.4 / 4 = 0.1
+
+```
+import numpy as np
+
+def autocorrelation(x, lags):
+    """
+    Calculate the autocorrelation function for a time series x and given lags.
+    
+    Args:
+        x (array-like): The time series data.
+        lags (array-like): The lags for which to calculate the autocorrelation.
+        
+    Returns:
+        list: The autocorrelation coefficients for the given lags.
+    """
+    mean = np.mean(x)
+    variance = np.var(x)
+    autocorrelations = []
+    
+    for lag in lags:
+        shifted_x = x[lag:]
+        original_x = x[:len(x)-lag]
+        autocovariance = np.mean((original_x - mean) * (shifted_x - mean))
+        autocorrelation = autocovariance / variance
+        autocorrelations.append(autocorrelation)
+        
+    return autocorrelations
+
+# Example usage
+time_series = [5, 7, 9, 6, 8, 10]
+lags = [1, 2, 3]
+autocorrelations = autocorrelation(time_series, lags)
+print(autocorrelations)
+
+```
