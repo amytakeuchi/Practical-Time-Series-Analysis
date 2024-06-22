@@ -103,7 +103,7 @@ for i in range(1, 6):
 ```
 print(time_series)
 ```
-
+<img src="images/print_time_series.png?" width="500" height="300"/>
 
 ```
 # Plot the time series
@@ -114,3 +114,5 @@ plt.xlabel('Time')
 plt.ylabel('Value')
 plt.show()
 ```
+
+<img src="images/time_series_plot.png?" width="500" height="300"/>
