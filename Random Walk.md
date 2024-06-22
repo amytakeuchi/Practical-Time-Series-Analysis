@@ -1,4 +1,4 @@
-#Random Walk
+# Random Walk
 ```
 import numpy as np
 import matplotlib.pyplot as plt
