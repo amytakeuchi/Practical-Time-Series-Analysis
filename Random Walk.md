@@ -57,5 +57,5 @@ print(f"End point: {random_walk[-1]}")
 print(f"Lowest point: {np.min(random_walk)}")
 print(f"Highest point: {np.max(random_walk)}")
 ```
-<img src="images/random_walk?" width="1000" height="400"/>
+<img src="images/random_walk.png?" width="1000" height="400"/>
 
