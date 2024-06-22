@@ -99,7 +99,7 @@ for i in range(1, 6):
 ```
 <img src="images/acf_viz.png?" width="500" height="300"/>
 
-**##How time_series look like here##***
+**##How time_series look like here##**
 ```
 print(time_series)
 ```
