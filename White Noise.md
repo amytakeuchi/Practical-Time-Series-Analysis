@@ -54,4 +54,6 @@ plt.ylabel('Frequency')
 plt.grid(True)
 plt.show()
 ```
-<img src="images/white_noise_series.png?" width="1200" height="600"/>
+<img src="images/white_noise_series.png?" width="900" height="450"/>
+
+<img src="images/histogram_of_white_noise.png?" width="500" height="300"/>
