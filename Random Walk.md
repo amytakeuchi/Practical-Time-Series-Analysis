@@ -10,11 +10,12 @@ In the context of time series, a random walk is a process where the current valu
 <br /> 
 $X_t = X_{t-1} + e_t$
 <br /> 
+<br /> 
 Where:<br /> 
-
-
-
-
+- $X_t$ is the value at time t
+- $X_{t-1}$ is the value at the previous time step
+- $e_t$ is a random variable (often normally distributed) representing a random change
+<br /> 
 
 ```
 import numpy as np
