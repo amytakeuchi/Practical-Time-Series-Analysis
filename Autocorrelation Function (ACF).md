@@ -14,7 +14,7 @@ This ensures that the autocorrelation coefficient is always between -1 and 1, wi
 - $ρ_k$ = 1 indicating perfect positive correlation
 - $ρ_k$ = -1 indicating perfect negative correlation
 - $ρ_k$ = 0 indicating no correlation
-The estimation of the autocorrelation coefficient at lag $k$, denoted by $r_k$, is given by:<br />
+<br /> The estimation of the autocorrelation coefficient at lag $k$, denoted by $r_k$, is given by:<br />
 <br />
 $r_k = c_k / c_0$
 <br />
