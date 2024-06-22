@@ -57,6 +57,7 @@ plt.show()
 <img src="images/white_noise_series.png?" width="900" height="450"/>
 
 <img src="images/histogram_of_white_noise.png?" width="500" height="300"/>
+
 ```
 # Plot autocorrelation function
 plot_acf(white_noise, lags=20)
