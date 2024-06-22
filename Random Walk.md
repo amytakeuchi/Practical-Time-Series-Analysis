@@ -8,7 +8,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 def generate_random_walk(steps, start=0, step_size=1):
-    #Generate random steps (either +1 or -1)
+    -- Generate random steps (either +1 or -1)
     random_steps = np.random.choice([-1, 1], size=steps)
     
     #Multiply by step size
