@@ -68,7 +68,7 @@ print(autocorrelations)
 ***Output***
 [-0.08571428571428572, -0.5142857142857143, 0.8285714285714285]
 
-***Visualizing Autocorrelation Function***
+**Visualizing Autocorrelation Function**
 ```
 import numpy as np
 import matplotlib.pyplot as plt
@@ -98,3 +98,19 @@ for i in range(1, 6):
     print(f"Autocorrelation coefficient at lag {i}: {autocorr[i]:.4f}")
 ```
 <img src="images/acf_viz.png?" width="500" height="300"/>
+
+**##How time_series look like here##***
+```
+print(time_series)
+```
+
+
+```
+# Plot the time series
+plt.figure(figsize=(14, 6))
+plt.plot(time_series)
+plt.title('Time Series')
+plt.xlabel('Time')
+plt.ylabel('Value')
+plt.show()
+```
