@@ -65,3 +65,36 @@ autocorrelations = autocorrelation(time_series, lags)
 print(autocorrelations)
 
 ```
+***Output***
+[-0.08571428571428572, -0.5142857142857143, 0.8285714285714285]
+
+***Visualizing Autocorrelation Function***
+```
+import numpy as np
+import matplotlib.pyplot as plt
+from statsmodels.tsa.stattools import acf
+
+# Generate a sample time series
+np.random.seed(42)
+**time_series** = np.random.randn(1000).cumsum()
+
+# Calculate autocorrelation coefficients
+lags = 50
+autocorr = acf(time_series, nlags=lags)
+
+# Plot the autocorrelation coefficients
+plt.figure(figsize=(10, 6))
+plt.bar(range(len(autocorr)), autocorr)
+plt.xlabel('Lag')
+plt.ylabel('Autocorrelation Coefficient')
+plt.title('Autocorrelation Function (ACF)')
+plt.axhline(y=0, color='r', linestyle='--')
+plt.axhline(y=1.96/np.sqrt(len(time_series)), color='r', linestyle='--')
+plt.axhline(y=-1.96/np.sqrt(len(time_series)), color='r', linestyle='--')
+plt.show()
+
+# Print some autocorrelation coefficients
+for i in range(1, 6):
+    print(f"Autocorrelation coefficient at lag {i}: {autocorr[i]:.4f}")
+```
+
