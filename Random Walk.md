@@ -8,13 +8,13 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 def generate_random_walk(steps, start=0, step_size=1):
-    # Generate random steps (either +1 or -1)
+    #Generate random steps (either +1 or -1)
     random_steps = np.random.choice([-1, 1], size=steps)
     
-    # Multiply by step size
+    #Multiply by step size
     path = step_size * np.cumsum(random_steps)
     
-    # Add the starting point
+    #Add the starting point
     return start + np.insert(path, 0, 0)
 
 # Parameters
