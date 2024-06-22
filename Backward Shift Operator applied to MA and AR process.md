@@ -16,5 +16,6 @@ This means that applying $B$ to $Yt$ gives you the previous value in the series.
 
 **Multiple applications** <br /> 
 You can apply B multiple times: <br /> 
-$B²(Yt) = B(B(Yt)) = B(Yt-1) = Yt-2$
+$B²(Yt) = B(B(Yt)) = B(Yt-1) = Yt-2$ <br /> 
+$B^kXt = X{t-k}$
 
