@@ -2,8 +2,7 @@
 
 ## Backward Shift Operator
 <img src="images/bsf_definition.png?" width="500" height="300"/>
-**Definition** 
-<br /> 
+***Definition***
 For a time series $Yt$, the backward shift operator $B$ is defined as:
 <br /> 
 <br /> 
