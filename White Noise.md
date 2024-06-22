@@ -17,3 +17,31 @@ Where:
   - $E[ε_t]$ = 0 (zero mean)
   - $Var(ε_t)$ = σ² (constant variance)
   - $Cov(ε_t, ε_s)$ = 0 for t ≠ s (uncorrelated)
+```
+import numpy as np
+import matplotlib.pyplot as plt
+from statsmodels.graphics.tsaplots import plot_acf
+
+# Set random seed for reproducibility
+np.random.seed(42)
+
+# Generate white noise
+n = 1000  # Number of observations
+mean = 0
+std_dev = 1
+white_noise = np.random.normal(mean, std_dev, n)
+
+# Plot the white noise series
+plt.figure(figsize=(12, 6))
+plt.plot(white_noise)
+plt.title('White Noise Series')
+plt.xlabel('Time')
+plt.ylabel('Value')
+plt.grid(True)
+plt.show()
+
+# Calculate and print statistics
+print(f"Mean: {np.mean(white_noise):.4f}")
+print(f"Standard Deviation: {np.std(white_noise):.4f}")
+print(f"Variance: {np.var(white_noise):.4f}")
+```
