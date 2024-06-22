@@ -13,6 +13,7 @@
 -**AR(p) processes**
   - Autoregressive processes: Definition, Simulation, and First Exammples
   - Autoregressive Processes: Backshift Operator and the ACF
+  
 **Intro to Yule-Walker equations**
   - Difference equations
   - Yule-Walker equations
