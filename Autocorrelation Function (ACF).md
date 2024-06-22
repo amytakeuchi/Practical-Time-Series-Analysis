@@ -25,3 +25,4 @@ where
 - $c_0$ is the sample variance.<br />
 <br />
 Here's an example with numbers:
+
