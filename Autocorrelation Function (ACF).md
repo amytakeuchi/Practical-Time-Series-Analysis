@@ -76,7 +76,7 @@ from statsmodels.tsa.stattools import acf
 
 # Generate a sample time series
 np.random.seed(42)
-**time_series** = np.random.randn(1000).cumsum()
+time_series = np.random.randn(1000).cumsum()
 
 # Calculate autocorrelation coefficients
 lags = 50
