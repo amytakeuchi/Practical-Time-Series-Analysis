@@ -14,3 +14,6 @@ The mathematical model for white noise can be expressed as: <br />
 Where:
 - $X_t$ is the white noise process at time t
 - $ε_t$ is a sequence of independent and identically distributed (i.i.d.) random variables with:
+- - $E[ε_t]$ = 0 (zero mean)
+- - $Var(ε_t)$ = σ² (constant variance)
+- - $Cov(ε_t, ε_s)$ = 0 for t ≠ s (uncorrelated)
