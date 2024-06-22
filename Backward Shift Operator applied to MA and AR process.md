@@ -13,9 +13,3 @@ $B(Yt) = Yt-1$
 <br /> 
 This means that applying $B$ to $Yt$ gives you the previous value in the series.
 
-
-
-
-
-
-<br /> 
