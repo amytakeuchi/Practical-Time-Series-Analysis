@@ -1,7 +1,7 @@
 # Backward Shift Operator applied to MA and AR process
 
 ## Backward Shift Operator
-!<img src="images/bsf_definition.png?" width="500" height="300"/>
+<img src="images/bsf_definition.png?" width="500" height="300"/>
 <br /> 
 **Definition**
 <br /> 
