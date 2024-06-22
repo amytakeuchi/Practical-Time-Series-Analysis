@@ -2,8 +2,18 @@
 
 ### Module 1: Basics
 ### Module 2: Visualizing Time Series, and Beginning to Model
+  - Time Plots
+  - First Intuitions in (weak) stationarity
+  - Autocovariance function
+  - Autocoveriance coefficients
+  - Autocorrelation Function (ACF)
+  - Noise Versus Signal
 ### Module 3: Stationarity, MA(q), and AR(p) process
 - **Stationarity: generalizing from an individual to a group**
+  - Stationarity examples: White Noise, Random Walks, and Moving Averages
+  - Stationarity: Intuition and Definition
+  - Stationarity: First Examples: White Noise and Random Walks
+  - Stationarity: ACF and Moving Averages
 - **The Backshift Operator applied to MA(q) and AR(p) processes**
   - Series and Series Representation
   - Backward Shift Operator
