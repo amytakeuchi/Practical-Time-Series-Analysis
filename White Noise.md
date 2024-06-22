@@ -44,4 +44,14 @@ plt.show()
 print(f"Mean: {np.mean(white_noise):.4f}")
 print(f"Standard Deviation: {np.std(white_noise):.4f}")
 print(f"Variance: {np.var(white_noise):.4f}")
+
+# Plot histogram
+plt.figure(figsize=(10, 6))
+plt.hist(white_noise, bins=30, edgecolor='black')
+plt.title('Histogram of White Noise')
+plt.xlabel('Value')
+plt.ylabel('Frequency')
+plt.grid(True)
+plt.show()
 ```
+<img src="images/white_noise_series.png?" width="1200" height="600"/>
