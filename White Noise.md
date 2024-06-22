@@ -8,7 +8,8 @@ White noise is a random signal that has equal intensity at different frequencies
 ### Formula for White Noise
 The mathematical model for white noise can be expressed as: <br /> 
 <br /> 
-$X_t = ε_t$
+      $X_t = ε_t$
+<br /> 
 <br /> 
 Where:
 - $X_t$ is the white noise process at time t
