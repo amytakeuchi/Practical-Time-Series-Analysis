@@ -50,3 +50,4 @@ plt.show()
 # Print first few rows
 print(df.head())
 ```
+<img src="images/bso_timeseries.png?" width="900" height="450"/>
