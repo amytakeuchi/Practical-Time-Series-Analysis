@@ -1,7 +1,7 @@
 #Random Walk
 import numpy as np
 import matplotlib.pyplot as plt
-
+,,,
 def generate_random_walk(steps, start=0, step_size=1):
     # Generate random steps (either +1 or -1)
     random_steps = np.random.choice([-1, 1], size=steps)
@@ -37,6 +37,6 @@ print(f"Start point: {random_walk[0]}")
 print(f"End point: {random_walk[-1]}")
 print(f"Lowest point: {np.min(random_walk)}")
 print(f"Highest point: {np.max(random_walk)}")
-
+,,,
 <img src="images/random_walk.png?" width="400" height="300"/>
 
