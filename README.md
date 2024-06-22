@@ -11,11 +11,12 @@
   - Duality
   - Mean Square Convergence
 -**AR(p) processes**
-  - Autoregressive processes - Definition, Simulation, and First Exammples
-  - Autoregressive Processes - Backshift Operator and the ACF
+  - Autoregressive processes: Definition, Simulation, and First Exammples
+  - Autoregressive Processes: Backshift Operator and the ACF
 -**Intro to Yule-Walker equations**
   - Difference equations
   - Yule-Walker equations
+
 ### Module 4: AR(q) process, Yule-Walker equations, PACF
 - **Employ PACF to estimate the order of AR(p) processes**
   - Partial Autocorrelation and the PACF First Examples
