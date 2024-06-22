@@ -97,4 +97,4 @@ plt.show()
 for i in range(1, 6):
     print(f"Autocorrelation coefficient at lag {i}: {autocorr[i]:.4f}")
 ```
-
+<img src="images/acf_viz.png?" width="500" height="300"/>
