@@ -229,7 +229,7 @@ Interpreting the results: <br />
 - The AR coefficients do not show a clear pattern of decay.
 - They may appear erratic or grow in magnitude with increasing lag.
 - This makes it impossible to approximate the process with a finite-order AR model.
-
+<br />
 **Theoretical coefficients: **
 - For the invertible process, the printed theoretical coefficients should closely match the plotted coefficients from the fitted models.
 
