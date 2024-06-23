@@ -6,7 +6,7 @@
 - [Mean square Convergence](##mean-square-convergence)
 
 ## Series and Series Representation
-
+<img src="images/series.png?" width="600" height="300"/>
 
 ## Backward Shift Operator
 **Backward Shift Definition** <br /> 
