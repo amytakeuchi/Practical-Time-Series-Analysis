@@ -61,11 +61,65 @@ print(df.head())
 ## Intro to Invertibility
 <img src="images/invertibility_definition.png?" width="600" height="300"/>
 <br /> 
-Definition: A stochastic process is invertible if the current value can be expressed as a convergent infinite sum of past and present observations. <br /> 
-Importance: Invertibility ensures that we can express the process in terms of past observations, which is crucial for forecasting and interpretation. <br /> 
-Application: It's particularly important for MA processes. An invertible MA process can be approximated by an AR process of infinite order.
+- **Definition**: A stochastic process is invertible if the current value can be expressed as a convergent infinite sum of past and present observations. <br /> 
+- **Importance**: Invertibility ensures that we can express the process in terms of past observations, which is crucial for forecasting and interpretation. <br /> 
+- **Application**: It's particularly important for MA processes. An invertible MA process can be approximated by an AR process of infinite order.
 <br /> 
+```
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from statsmodels.tsa.arima.model import ARIMA
 
+def generate_ma1(theta, n):
+    """Generate an MA(1) process: Yt = εt + θεt-1"""
+    epsilon = np.random.normal(0, 1, n+1)
+    y = epsilon[1:] + theta * epsilon[:-1]
+    return y
+
+def fit_ar(y, order):
+    """Fit an AR model of specified order"""
+    model = ARIMA(y, order=(order, 0, 0))
+    results = model.fit()
+    return results.arparams
+
+# Generate invertible and non-invertible MA(1) processes
+np.random.seed(0)
+n = 1000
+y_inv = generate_ma1(0.5, n)  # Invertible: |θ| < 1
+y_noninv = generate_ma1(2, n)  # Non-invertible: |θ| > 1
+
+# Fit AR models of increasing order
+max_order = 10
+ar_params_inv = [fit_ar(y_inv, i) for i in range(1, max_order+1)]
+ar_params_noninv = [fit_ar(y_noninv, i) for i in range(1, max_order+1)]
+
+# Plot results
+fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(12, 10))
+
+for i, params in enumerate(ar_params_inv):
+    ax1.plot(range(len(params)), params, label=f'AR({i+1})')
+ax1.set_title('AR Coefficients for Invertible MA(1)')
+ax1.set_xlabel('Lag')
+ax1.set_ylabel('Coefficient')
+ax1.legend()
+
+for i, params in enumerate(ar_params_noninv):
+    ax2.plot(range(len(params)), params, label=f'AR({i+1})')
+ax2.set_title('AR Coefficients for Non-invertible MA(1)')
+ax2.set_xlabel('Lag')
+ax2.set_ylabel('Coefficient')
+ax2.legend()
+
+plt.tight_layout()
+plt.show()
+
+# Print theoretical AR coefficients for invertible process
+theta = 0.5
+theoretical_ar_coefs = [-theta**i for i in range(1, 11)]
+print("Theoretical AR coefficients for invertible MA(1):")
+print(theoretical_ar_coefs)
+```
 
 ## Duality
 
