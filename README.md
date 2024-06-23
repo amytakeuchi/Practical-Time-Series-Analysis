@@ -16,7 +16,7 @@
   - Stationarity: ACF and Moving Averages
 - **The Backshift Operator applied to MA(q) and AR(p) processes**
   - Series and Series Representation
-  - Backward Shift Operator
+  - [Backward Shift Operator] (https://github.com/amytakeuchi/Practical-Time-Series-Analysis/blob/main/Backward%20Shift%20Operator%20applied%20to%20MA%20and%20AR%20process.md)
   - Intro. to Invertibility
   - Duality
   - Mean Square Convergence
