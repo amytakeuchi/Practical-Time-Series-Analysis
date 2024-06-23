@@ -11,7 +11,7 @@ Where
 - $εt, εt-1, ..., εt-q$ are white noise error terms
 - $θ1, θ2, ..., θq$ are the parameters of the model
 <br />
-```
+``` 
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -72,5 +72,5 @@ print(f"εt-2 = {εt_2:.4f}")
 print(f"Xt = εt + {θ1:.1f}*εt-1 + {θ2:.1f}*εt-2")
 print(f"Xt = {εt:.4f} + {θ1:.1f}*{εt_1:.4f} + {θ2:.1f}*{εt_2:.4f} = {Xt:.4f}")
 print(f"Actual value in series: {y[t]:.4f}")
-```
+``` 
 <img src="images/intro_MA2/autocorrelation.png?" width="600" height="300"/>
