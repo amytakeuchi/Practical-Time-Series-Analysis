@@ -67,7 +67,6 @@ Sum of first 100000 terms: 12.090146129863335 <br />
 - Root test
 
 **Geometric Series** <br /> 
-![Geometric Series](images/geometric_series.png)
 <img src="images/geometric_series.png?" width="600" height="450"/>
 ```
 def geometric_series(r, n):
