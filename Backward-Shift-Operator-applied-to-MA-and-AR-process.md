@@ -5,7 +5,7 @@
 - [Mean square Convergence](##mean-square-convergence)
 
 ## Backward Shift Operator
-**Backward Shift Definition**
+**Backward Shift Definition** <br /> 
 <img src="images/bsf_definition.png?" width="600" height="300"/>
 <br /> 
 <br /> 
