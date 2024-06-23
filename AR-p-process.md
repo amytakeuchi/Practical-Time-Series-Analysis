@@ -46,6 +46,7 @@ plt.show()
 <img src="images/simulated_ar1_process.png?" width="500" height="200"/>
 
 ## First Exmamples
+<img src="images/ar_first_example.png?" width="600" height="300"/>
 
 
 ## Backshift Operator and the ACF
