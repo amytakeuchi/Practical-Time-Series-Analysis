@@ -59,7 +59,29 @@ Sum of first 100000 terms: 12.090146129863335 <br />
 <img src="images/absolute_convergence.png?" width="600" height="300"/>
 
 **Convergence tests**
-- 
+- Integral test
+- Comparison test
+- Limit Comparison test
+- Alternating series test
+- Ratio test
+- Root test
+
+**Geometric Series**
+<img src="images/series.png?" width="600" height="300"/>
+```
+def geometric_series(r, n):
+    return sum(r**i for i in range(n))
+```
+This function calculates the sum of the first n terms of a geometric series with ratio r. <br /> 
+
+r**i calculates r raised to the power of i <br /> 
+for i in range(n) generates a sequence of powers from 0 to n-1 <br /> 
+sum() adds up all these terms <br /> 
+```
+r = 0.5
+for n in [10, 100, 1000, 10000]:
+    print(f"Sum of first {n} terms: {geometric_series(r, n)}")
+```
 
 ## Backward Shift Operator
 **Backward Shift Definition** <br /> 
