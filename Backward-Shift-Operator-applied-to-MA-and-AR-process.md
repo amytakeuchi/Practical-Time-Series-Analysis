@@ -122,7 +122,7 @@ theoretical_ar_coefs = [-theta**i for i in range(1, 11)]
 print("Theoretical AR coefficients for invertible MA(1):")
 print(theoretical_ar_coefs)
 ```
-<img src="images/invertibility_ar.png?" width="900" height="450"
+<img src="images/invertibility_ar.png?" width="900" height="450">
 
 ## Duality
 
