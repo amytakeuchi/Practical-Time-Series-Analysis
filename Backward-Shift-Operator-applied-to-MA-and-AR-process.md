@@ -74,9 +74,9 @@ def geometric_series(r, n):
 ```
 This function calculates the sum of the first n terms of a geometric series with ratio r. <br /> 
 
-r**i calculates r raised to the power of i <br /> 
-for i in range(n) generates a sequence of powers from 0 to n-1 <br /> 
-sum() adds up all these terms <br /> 
+`r**i` calculates `r` raised to the power of `i` <br /> 
+`for i in range(n)` generates a sequence of powers from `0 to n-1` <br /> 
+`sum()` adds up all these terms <br /> 
 ```
 r = 0.5
 for n in [10, 100, 1000, 10000]:
