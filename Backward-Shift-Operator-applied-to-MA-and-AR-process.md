@@ -84,9 +84,11 @@ for n in [10, 100, 1000, 10000]:
 ```
 
 **Series Representation** <br /> 
-<img src="images/series_representation.png?" width="600" height="450"/>
-<img src="images/series_representation_cont.png?" width="600" height="450"/>
+<img src="images/series_representation.png?" width="300" height="150"/>
+<img src="images/series_representation_cont.png?" width="300" height="150"/>
 
+**Complex Functions** <br /> 
+<img src="images/complex_functions.png?" width="300" height="150"/>
 
 ## Backward Shift Operator
 **Backward Shift Definition** <br /> 
