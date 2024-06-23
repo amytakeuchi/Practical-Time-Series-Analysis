@@ -1,8 +1,8 @@
 # Backward Shift Operator applied to MA and AR process
 - [Backward Shift Operator](#backward-shift-operator)
-- [Intro. to Invertibility] (##intro-to-invertibility)
-- [Duality] (##duality)
-- [Mean square Convergence] (##mean-square-convergence)
+- [Intro. to Invertibility](##intro-to-invertibility)
+- [Duality](##duality)
+- [Mean square Convergence](##mean-square-convergence)
 
 ## Backward Shift Operator
 ![Backward Shift Definition](images/bsf_definition.png)
