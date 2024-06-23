@@ -59,7 +59,13 @@ print(df.head())
 <img src="images/bso_timeseries.png?" width="900" height="450"/>
 
 ## Intro to Invertibility
-<img src="images/invertability_definition.png?" width="600" height="300"/>
+<img src="images/invertibility_definition.png?" width="600" height="300"/>
+<br /> 
+Definition: A stochastic process is invertible if the current value can be expressed as a convergent infinite sum of past and present observations. <br /> 
+Importance: Invertibility ensures that we can express the process in terms of past observations, which is crucial for forecasting and interpretation. <br /> 
+Application: It's particularly important for MA processes. An invertible MA process can be approximated by an AR process of infinite order.
+<br /> 
+
 
 ## Duality
 
