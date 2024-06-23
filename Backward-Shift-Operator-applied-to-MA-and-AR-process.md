@@ -7,7 +7,6 @@
 
 ## Series and Series Representation  
 <img src="images/series.png?" width="600" height="300"/>
-<br />
 
 **Convergent Series** <br />
 A series is convergent if **the sum of its terms approaches a finite limit** as the number of terms increases indefinitely.
@@ -35,9 +34,26 @@ Sum of first 1000 terms: 2.0 <br />
 Sum of first 10000 terms: 2.0 <br />
 Theoretical limit: 2.0 <br />
 <br />
-**Divergent Series**
 
+**Divergent Series** <br /> 
+A series is divergent if the sum of its terms does not approach a finite limit as the number of terms increases indefinitely.
+<br /> 
+<br /> 
 
+Example: The harmonic series <br /> 
+$1 + 1/2 + 1/3 + 1/4 + ...$
+```
+def harmonic_series(n):
+    return sum(1/i for i in range(1, n+1))
+
+for n in [10, 100, 1000, 10000, 100000]:
+    print(f"Sum of first {n} terms: {harmonic_series(n)}")
+```
+Sum of first 10 terms: 2.9289682539682538 <br />
+Sum of first 100 terms: 5.187377517639621 <br />
+Sum of first 1000 terms: 7.485470860550343 <br />
+Sum of first 10000 terms: 9.787606036044348 <br />
+Sum of first 100000 terms: 12.090146129863335 <br />
 
 ## Backward Shift Operator
 **Backward Shift Definition** <br /> 
