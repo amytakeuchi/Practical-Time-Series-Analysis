@@ -1,8 +1,12 @@
 # Backward Shift Operator applied to MA and AR process
+- [Series and Series Representation](#series-and-series-representation)
 - [Backward Shift Operator](#backward-shift-operator)
 - [Intro. to Invertibility](##intro-to-invertibility)
 - [Duality](##duality)
 - [Mean square Convergence](##mean-square-convergence)
+
+## Series and Series Representation
+
 
 ## Backward Shift Operator
 **Backward Shift Definition** <br /> 
