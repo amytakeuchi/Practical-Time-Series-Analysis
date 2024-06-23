@@ -14,10 +14,9 @@
   - Stationarity: Intuition and Definition
   - Stationarity: First Examples: White Noise and Random Walks
   - Stationarity: ACF and Moving Averages
-- **The Backshift Operator applied to MA(q) and AR(p) processes**
+- [**The Backshift Operator applied to MA(q) and AR(p) processes**](./Backward-Shift-Operator-applied-to-MA-and-AR-process.md)
   - Series and Series Representation
-  - [Backward Shift Operator](./Backward-Shift-Operator-applied-to-MA-and-AR-process.md)
-
+  - Backward Shift Operator
   - Intro. to Invertibility
   - Duality
   - Mean Square Convergence
