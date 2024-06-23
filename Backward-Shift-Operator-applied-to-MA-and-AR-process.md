@@ -83,6 +83,11 @@ for n in [10, 100, 1000, 10000]:
     print(f"Sum of first {n} terms: {geometric_series(r, n)}")
 ```
 
+**Series Representation** <br /> 
+<img src="images/series_representation.png?" width="600" height="450"/>
+<img src="images/series_representation_cont.png?" width="600" height="450"/>
+
+
 ## Backward Shift Operator
 **Backward Shift Definition** <br /> 
 <img src="images/bsf_definition.png?" width="600" height="300"/>
