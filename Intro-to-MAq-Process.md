@@ -10,7 +10,7 @@ Where
 - $μ$ is the mean of the series
 - $εt, εt-1, ..., εt-q$ are white noise error terms
 - $θ1, θ2, ..., θq$ are the parameters of the model
-<br />
+
 ``` 
 import numpy as np
 import pandas as pd
