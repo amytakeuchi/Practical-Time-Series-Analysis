@@ -220,12 +220,21 @@ This code does the following: <br />
 - Calculates the theoretical AR coefficients for the invertible process.
 
 Interpreting the results: <br />
-Invertible MA(1):
+**Invertible MA(1):**
 - The AR coefficients decay exponentially as the lag increases.
 - This matches the theoretical expectation: for an MA(1) with parameter θ, the AR(∞) representation has coefficients -θ, θ², -θ³, ...
 - This decay allows us to approximate the MA process with a finite-order AR process.
 
+**Non-invertible MA(1):**
+- The AR coefficients do not show a clear pattern of decay.
+- They may appear erratic or grow in magnitude with increasing lag.
+- This makes it impossible to approximate the process with a finite-order AR model.
 
+**Theoretical coefficients: **
+- For the invertible process, the printed theoretical coefficients should closely match the plotted coefficients from the fitted models.
+
+The invertibility condition ensures that we can express the MA process in terms of past observations, which is crucial for forecasting and interpretation. When a process is not invertible, we lose this ability, making the process much more difficult to work with in practice. <br />
+This concept extends to higher-order MA processes and ARMA processes, where invertibility conditions become more complex but equally important for time series analysis and forecasting.
 ## Duality
 
 ## Mean Square Convergence
