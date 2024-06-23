@@ -1,4 +1,11 @@
 # Backward Shift Operator applied to MA and AR process
+- [Backward Shift Operator](#backward-shift-operator)
+- [Intro. to Invertibility] ## Intro. to Invertibility
+
+
+## Duality
+
+## Mean square Convergence
 
 ## Backward Shift Operator
 ![Backward Shift Definition](images/bsf_definition.png)
@@ -51,3 +58,11 @@ plt.show()
 print(df.head())
 ```
 <img src="images/bso_timeseries.png?" width="900" height="450"/>
+
+## Intro. to Invertibility
+
+
+## Duality
+
+## Mean square Convergence
+
