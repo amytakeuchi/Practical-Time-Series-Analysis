@@ -59,7 +59,7 @@ print(df.head())
 <img src="images/bso_timeseries.png?" width="900" height="450"/>
 
 ## Intro to Invertibility
-
+<img src="images/invertability_definition.png?" width="600" height="300"/>
 
 ## Duality
 
