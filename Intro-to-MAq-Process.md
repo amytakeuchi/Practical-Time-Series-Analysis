@@ -10,3 +10,5 @@ Where
 - $μ$ is the mean of the series
 - $εt, εt-1, ..., εt-q$ are white noise error terms
 - $θ1, θ2, ..., θq$ are the parameters of the model
+<br /> 
+<img src="images/autocorrelation.png?" width="600" height="300"/>
