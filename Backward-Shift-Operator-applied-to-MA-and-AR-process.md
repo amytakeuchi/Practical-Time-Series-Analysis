@@ -1,6 +1,6 @@
 # Backward Shift Operator applied to MA and AR process
 - [Backward Shift Operator](#backward-shift-operator)
-- [Intro. to Invertibility] ## Intro. to Invertibility
+- [Intro. to Invertibility] (## Intro-to-Invertibility)
 
 
 ## Duality
@@ -59,7 +59,7 @@ print(df.head())
 ```
 <img src="images/bso_timeseries.png?" width="900" height="450"/>
 
-## Intro. to Invertibility
+## Intro to Invertibility
 
 
 ## Duality
