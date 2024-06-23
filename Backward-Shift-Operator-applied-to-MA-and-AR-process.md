@@ -55,9 +55,10 @@ Sum of first 1000 terms: 7.485470860550343 <br />
 Sum of first 10000 terms: 9.787606036044348 <br />
 Sum of first 100000 terms: 12.090146129863335 <br />
 <br />
-**Absolute Convergence**
+**Absolute Convergence** <br /> 
 <img src="images/absolute_convergence.png?" width="600" height="300"/>
 
+**Convergence tests**
 
 
 ## Backward Shift Operator
