@@ -8,10 +8,12 @@
 ## Series and Series Representation  
 <img src="images/series.png?" width="600" height="300"/>
 <br />
-**Convergent Series** 
+
+**Convergent Series** <br />
 A series is convergent if **the sum of its terms approaches a finite limit** as the number of terms increases indefinitely.
 <br /> 
 <br />
+
 Example: The geometric series with $|r| < 1$
 $1 + r + r^2 + r^3 + ...$
 <br />
