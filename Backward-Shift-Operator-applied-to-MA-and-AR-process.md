@@ -59,7 +59,7 @@ Sum of first 100000 terms: 12.090146129863335 <br />
 <img src="images/absolute_convergence.png?" width="600" height="300"/>
 
 **Convergence tests**
-
+- 
 
 ## Backward Shift Operator
 **Backward Shift Definition** <br /> 
