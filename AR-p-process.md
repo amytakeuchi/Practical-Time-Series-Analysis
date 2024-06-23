@@ -5,6 +5,7 @@
 
 For an AR process of order $p$ (denoted as AR($p$)), the current value $y{t}$ is defined as: <br /> 
 $yt =c+ϕ{1}y{t−1}+ϕ{2}y{t−2}+…+ϕ{p}y{t−p}+ϵ{t}$ 
+<br /> 
 where:<br /> 
 - c is a constant term.
 - $𝜙{1}, 𝜙{2},…,𝜙{𝑝} are the parameters of the model.
