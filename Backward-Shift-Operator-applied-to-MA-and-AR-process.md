@@ -151,6 +151,9 @@ print(df.head())
 - **Definition**: A stochastic process is invertible if the current value can be expressed as a convergent infinite sum of past and present observations. 
 - **Importance**: Invertibility ensures that we can express the process in terms of past observations, which is crucial for forecasting and interpretation. 
 - **Application**: It's particularly important for MA processes. An invertible MA process can be approximated by an AR process of infinite order.
+- **Condition**: For an MA(1) process Yt = εt + θεt-1, the process is invertible if |θ| < 1.
+
+Now, let's illustrate this concept with a Python example. We'll create both an invertible and a non-invertible MA(1) process, and demonstrate how they behave differently when we try to express them as AR processes.
 <br />
 
 ```
@@ -209,6 +212,19 @@ print("Theoretical AR coefficients for invertible MA(1):")
 print(theoretical_ar_coefs)
 ```
 <img src="images/invertibility_ar.png?" width="900" height="450">
+
+This code does the following: <br />
+- Generates an invertible MA(1) process with θ = 0.5 and a non-invertible MA(1) process with θ = 2.
+- Fits AR models of increasing order to both processes.
+- Plots the AR coefficients for both processes.
+- Calculates the theoretical AR coefficients for the invertible process.
+
+Interpreting the results: <br />
+Invertible MA(1):
+- The AR coefficients decay exponentially as the lag increases.
+- This matches the theoretical expectation: for an MA(1) with parameter θ, the AR(∞) representation has coefficients -θ, θ², -θ³, ...
+- This decay allows us to approximate the MA process with a finite-order AR process.
+
 
 ## Duality
 
