@@ -72,5 +72,14 @@ print(f"εt-2 = {εt_2:.4f}")
 print(f"Xt = εt + {θ1:.1f}*εt-1 + {θ2:.1f}*εt-2")
 print(f"Xt = {εt:.4f} + {θ1:.1f}*{εt_1:.4f} + {θ2:.1f}*{εt_2:.4f} = {Xt:.4f}")
 print(f"Actual value in series: {y[t]:.4f}")
-``` 
-<img src="images/intro_MA2/autocorrelation.png?" width="600" height="300"/>
+```
+<img src="images/intro_MA2/simulated_ma2_process.png?" width="600" height="300"/>
+<img src="images/intro_MA2/autocorrelation.png?" width="300" height="150"/>
+<img src="images/intro_MA2/partial_autocorrelation.png?" width="300" height="150"/>
+MA(2) calculation for t=500:
+εt = 1.3994
+εt-1 = 0.9246
+εt-2 = 0.0596
+Xt = εt + 0.6*εt-1 + 0.3*εt-2
+Xt = 1.3994 + 0.6*0.9246 + 0.3*0.0596 = 1.9720
+Actual value in series: -0.1662
