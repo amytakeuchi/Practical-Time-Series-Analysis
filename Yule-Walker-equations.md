@@ -11,9 +11,14 @@ c) Calculate **the theoretical autocorrelation function** of an AR process
 
 ### Formula
 For an AR(p) model:
+<br /> 
 $X_t = c + φ₁X_{t-1} + φ₂X_{t-2} + ... + φ_pX_{t-p} + ε_t$
+ <br /> 
 The Yule-Walker equations are:
+<br /> 
 $ρ_k = φ₁ρ_{k-1} + φ₂ρ_{k-2} + ... + φ_pρ_{k-p}$
+<br /> 
+<br /> 
 Where:
 - $ρ_k$ is the autocorrelation at lag k
 - $φ_i$ are the AR coefficients
