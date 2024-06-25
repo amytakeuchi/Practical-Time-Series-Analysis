@@ -5,9 +5,9 @@ Yule-Walker equations, also known as autocorrelation equations, are a set of lin
 
 ### How are they used in time series analysis?
 Yule-Walker equations are primarily used to: <br /> 
-a) Estimate the coefficients of an AR(p) model <br /> 
-b) Determine the order of an AR model <br /> 
-c) Calculate the theoretical autocorrelation function of an AR process
+a) Estimate **the coefficients** of an AR(p) model <br /> 
+b) Determine **the order** of an AR model <br /> 
+c) Calculate **the theoretical autocorrelation function** of an AR process
 
 ### Formula
 For an AR(p) model:
