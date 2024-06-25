@@ -70,6 +70,8 @@ plot_acf(y, lags=20)
 plt.title('Autocorrelation Function')
 plt.show()
 ```
+True parameters: [ 1.5  -0.75] <br /> 
+Estimated parameters: [ 1.63315289 -0.8717853 ]
 <img src="images/yule_walker_ar.png?" width="500" height="300"/>
 <img src="images/yule_walker_acf.png?" width="500" height="300"/>
 
