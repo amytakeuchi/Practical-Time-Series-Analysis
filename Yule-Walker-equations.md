@@ -10,11 +10,11 @@ b) Determine **the order** of an AR model <br />
 c) Calculate **the theoretical autocorrelation function** of an AR process
 
 ### Formula
-For an AR(p) model:
+For an AR(p) model: <br /> 
 <br /> 
 $X_t = c + φ₁X_{t-1} + φ₂X_{t-2} + ... + φ_pX_{t-p} + ε_t$
- <br /> 
-The Yule-Walker equations are:
+<br /> 
+The Yule-Walker equations are: <br /> 
 <br /> 
 $ρ_k = φ₁ρ_{k-1} + φ₂ρ_{k-2} + ... + φ_pρ_{k-p}$
 <br /> 
