@@ -1,4 +1,4 @@
-# Yule-Walker equations
+# Intro to Yule-Walker equations
 
 ## What is Yule-Walker equation:
 Yule-Walker equations, also known as autocorrelation equations, are a set of linear equations used to estimate the parameters of an autoregressive (AR) model in time series analysis. They relate the autocorrelation function of a time series to the parameters of an AR model.
