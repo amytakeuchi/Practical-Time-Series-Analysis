@@ -82,7 +82,7 @@ plt.show()
 - Plots the generated time series.
 - Plots the Partial Autocorrelation Function (PACF) using the 'ywm' (Yule-Walker with unbiased estimate of the process variance) method.
 - Plots the Autocorrelation Function (ACF) for comparison.
-<br /> 
+
 **Interpreting the results:** <br /> 
 - In the PACF plot, you should see significant spikes at lags 1 and 2, and insignificant values after that. This indicates an AR(2) process. 
 - The ACF plot, in contrast, will show a more gradually decaying pattern.
