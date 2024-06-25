@@ -33,3 +33,50 @@ The formula for PACF is more complex than for regular autocorrelation. It's typi
 For lag $k$, the partial autocorrelation $φ_kk$ is: <br /> 
 $φ_kk = Corr(X_t, X_{t-k} | X_{t-1}, ..., X_{t-k+1})$ <br /> 
 This represents the correlation between $X_t$ and $X_{t-k}$, controlling for the effects of intermediate lags. <br /> 
+
+```
+import numpy as np
+import matplotlib.pyplot as plt
+from statsmodels.tsa.arima_process import arma_generate_sample
+from statsmodels.graphics.tsaplots import plot_pacf, plot_acf
+
+# Set random seed for reproducibility
+np.random.seed(42)
+
+# Generate AR(2) process
+n = 1000
+ar_params = np.array([1.5, -0.75])
+ma_params = np.array([1])
+ar = np.r_[1, -ar_params]
+ma = np.r_[1, ma_params]
+y = arma_generate_sample(ar, ma, n)
+
+# Plot the time series
+plt.figure(figsize=(12, 4))
+plt.plot(y)
+plt.title('AR(2) Process')
+plt.xlabel('Time')
+plt.ylabel('Value')
+plt.show()
+
+# Plot PACF
+plt.figure(figsize=(12, 4))
+plot_pacf(y, lags=20, method='ywm')
+plt.title('Partial Autocorrelation Function (PACF)')
+plt.show()
+
+# For comparison, plot ACF
+plt.figure(figsize=(12, 4))
+plot_acf(y, lags=20)
+plt.title('Autocorrelation Function (ACF)')
+plt.show()
+```
+**This code does the following:** <br /> 
+Generates an AR(2) process with parameters [1.5, -0.75].<br /> 
+Plots the generated time series.<br /> 
+Plots the Partial Autocorrelation Function (PACF) using the 'ywm' (Yule-Walker with unbiased estimate of the process variance) method.<br /> 
+Plots the Autocorrelation Function (ACF) for comparison.<br /> 
+<br /> 
+**Interpreting the results:**<br /> 
+In the PACF plot, you should see significant spikes at lags 1 and 2, and insignificant values after that. This indicates an AR(2) process. <br /> 
+The ACF plot, in contrast, will show a more gradually decaying pattern. <br /> 
