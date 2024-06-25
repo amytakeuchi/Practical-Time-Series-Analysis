@@ -70,4 +70,6 @@ plot_acf(y, lags=20)
 plt.title('Autocorrelation Function')
 plt.show()
 ```
+<img src="images/yule_walker_ar.png?" width="500" height="300"/>
+<img src="images/yule_walker_acf.png?" width="500" height="300"/>
 
