@@ -29,6 +29,45 @@ $[ρ₁]   [1   ρ₁  ρ₂ ... ρ_{p-1}] [φ₁]$ <br />
 $[ρ₂] = [ρ₁  1   ρ₁ ... ρ_{p-2}] [φ₂]$ <br /> 
 $[...]   [...               ...] [...]$ <br /> 
 $[ρ_p]   [ρ_{p-1} ... ρ₁    1  ] [φ_p]$ <br /> 
+<br /> 
 
+```
+import numpy as np
+import matplotlib.pyplot as plt
+from statsmodels.tsa.ar_model import AutoReg
+from statsmodels.tsa.arima_process import arma_generate_sample
 
+# Set random seed for reproducibility
+np.random.seed(42)
+
+# Generate AR(2) process
+n = 1000
+ar_params = np.array([1.5, -0.75])
+ma_params = np.array([1])
+ar = np.r_[1, -ar_params]
+ma = np.r_[1, ma_params]
+y = arma_generate_sample(ar, ma, n)
+
+# Estimate AR parameters using Yule-Walker
+model = AutoReg(y, lags=2, old_names=False)
+results = model.fit(cov_type='HC0')
+
+# Print results
+print("True parameters:", ar_params)
+print("Estimated parameters:", results.params[1:])
+
+# Plot the time series
+plt.figure(figsize=(10, 6))
+plt.plot(y)
+plt.title('AR(2) Process')
+plt.xlabel('Time')
+plt.ylabel('Value')
+plt.show()
+
+# Plot autocorrelation function
+from statsmodels.graphics.tsaplots import plot_acf
+plot_acf(y, lags=20)
+plt.title('Autocorrelation Function')
+plt.show()
+```
 
