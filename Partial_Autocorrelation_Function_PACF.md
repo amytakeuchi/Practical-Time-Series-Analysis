@@ -15,11 +15,13 @@ AR processes - Data Oriented Examples
 **What is Partial Autocorrelation (PACF)?** <br /> 
 PACF measures the correlation between an observation in a time series with observations at prior time steps, with the effects of the intervening observations removed. In other words, it captures the direct effect of a lag on the current value, excluding indirect effects through intermediate lags.
 <br /> 
+<br /> 
 **How and when to use PACF in time series analysis:** <br /> 
 PACF is primarily used to: <br /> 
 a) Determine the order (p) of an autoregressive AR(p) model <br /> 
 b) Identify significant lags in time series data <br /> 
 c) Distinguish between AR and MA (Moving Average) processes <br /> 
+<br /> 
 **You use PACF when:**
 - You want to identify the appropriate lags for an AR model
 - You need to understand the direct relationships between observations at different lags
@@ -28,3 +30,6 @@ c) Distinguish between AR and MA (Moving Average) processes <br />
 **Formula:** <br /> 
 The formula for PACF is more complex than for regular autocorrelation. It's typically calculated recursively using the Durbin-Levinson algorithm or solving the Yule-Walker equations. <br /> 
 <br /> 
+For lag $k$, the partial autocorrelation $φ_kk$ is: <br /> 
+$φ_kk = Corr(X_t, X_{t-k} | X_{t-1}, ..., X_{t-k+1})$ <br /> 
+This represents the correlation between $X_t$ and $X_{t-k}$, controlling for the effects of intermediate lags. <br /> 
