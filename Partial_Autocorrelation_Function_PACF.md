@@ -71,6 +71,12 @@ plot_acf(y, lags=20)
 plt.title('Autocorrelation Function (ACF)')
 plt.show()
 ```
+<img src="images/pacf_ar2.pngg?" width="600" height="200"/>
+
+<img src="images/pacf_pacf.png?" width="600" height="200"/>
+
+<img src="images/pacf_acf.png?" width="600" height="200"/>
+<br /> 
 **This code does the following:** <br /> 
 Generates an AR(2) process with parameters [1.5, -0.75].<br /> 
 Plots the generated time series.<br /> 
