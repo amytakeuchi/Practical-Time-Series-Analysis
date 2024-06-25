@@ -98,6 +98,8 @@ plt.show()
 <img src="images/yw_ar_remind_3.png?" width="600" height="200"/>
 
 ### Yule-Walker Equations
+<img src="images/yw_equations.png?" width="600" height="200"/>
+<img src="images/yw_equations_for_k.png?" width="600" height="200"/>
 
 ### Matrix Form
 
