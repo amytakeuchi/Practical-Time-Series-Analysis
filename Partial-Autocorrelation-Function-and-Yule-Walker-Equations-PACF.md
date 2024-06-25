@@ -93,9 +93,9 @@ plt.show()
 
 ## Yule-Walker Equations in Matrix Form
 ### Reminding AR(p) process
-<img src="images/yw_ar_remind.png?" width="600" height="300"/>
+<img src="images/yw_ar_remind.png?" width="600" height="200"/>
 <img src="images/yw_ar_remind_2.png?" width="600" height="300"/>
-<img src="images/yw_ar_remind_3.png?" width="600" height="300"/>
+<img src="images/yw_ar_remind_3.png?" width="600" height="200"/>
 
 
 
