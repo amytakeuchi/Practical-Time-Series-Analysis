@@ -92,7 +92,7 @@ plt.show()
 - The ACF plot, in contrast, will show a more gradually decaying pattern.
 
 ## Yule-Walker Equations in Matrix Form
-
+### Reminding AR(p) process
 
 
 
