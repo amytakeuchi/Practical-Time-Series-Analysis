@@ -76,13 +76,13 @@ plt.show()
 <img src="images/pacf_pacf.png?" width="600" height="300"/>
 
 <img src="images/pacf_acf.png?" width="600" height="300"/>
-<br /> 
+
 **This code does the following:** <br /> 
-Generates an AR(2) process with parameters [1.5, -0.75].<br /> 
-Plots the generated time series.<br /> 
-Plots the Partial Autocorrelation Function (PACF) using the 'ywm' (Yule-Walker with unbiased estimate of the process variance) method.<br /> 
-Plots the Autocorrelation Function (ACF) for comparison.<br /> 
+- Generates an AR(2) process with parameters [1.5, -0.75].
+- Plots the generated time series.
+- Plots the Partial Autocorrelation Function (PACF) using the 'ywm' (Yule-Walker with unbiased estimate of the process variance) method.
+- Plots the Autocorrelation Function (ACF) for comparison.
 <br /> 
-**Interpreting the results:**<br /> 
-In the PACF plot, you should see significant spikes at lags 1 and 2, and insignificant values after that. This indicates an AR(2) process. <br /> 
-The ACF plot, in contrast, will show a more gradually decaying pattern. <br /> 
+**Interpreting the results:** <br /> 
+- In the PACF plot, you should see significant spikes at lags 1 and 2, and insignificant values after that. This indicates an AR(2) process. 
+- The ACF plot, in contrast, will show a more gradually decaying pattern.
