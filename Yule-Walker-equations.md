@@ -18,3 +18,10 @@ Where:
 - $ρ_k$ is the autocorrelation at lag k
 - $φ_i$ are the AR coefficients
 - $p$ is the order of the AR model
+
+In matrix form:
+$[ρ₁]   [1   ρ₁  ρ₂ ... ρ_{p-1}] [φ₁]$
+$[ρ₂] = [ρ₁  1   ρ₁ ... ρ_{p-2}] [φ₂]$
+$[...]   [...               ...] [...]$
+$[ρ_p]   [ρ_{p-1} ... ρ₁    1  ] [φ_p]$
+
