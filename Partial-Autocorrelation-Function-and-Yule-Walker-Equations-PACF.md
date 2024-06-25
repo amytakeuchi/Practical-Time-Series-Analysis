@@ -2,7 +2,7 @@
 - Partial Autocorrelation and the PACF First Examples <br /> 
 - Partial Autocorrelation and the PACF - Concept Development <br /> 
 **Write Yule-Walker Equations in matrix notation, and estimate model parameter**
-- [Yule-Walker Equations in Matrix Form](#Yule-Walker Equations in Matrix Form)
+- Yule-Walker Equations in Matrix Form
 - AR(2) Simulation (Parameter Estimation)
 - Yule Walker Estimation - AR(2) Simulation
 - AR(3) Simulation (Parameter Estimation)
