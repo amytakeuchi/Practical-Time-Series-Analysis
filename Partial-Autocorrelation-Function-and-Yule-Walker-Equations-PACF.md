@@ -99,7 +99,9 @@ plt.show()
 
 ### Yule-Walker Equations
 <img src="images/yw_equations.png?" width="600" height="200"/>
-<img src="images/yw_equations_for_k.png?" width="600" height="200"/>
+<img src="images/yw_equations_for_k.png?" width="600" height="300"/>
+<img src="images/yw_equations_for_-k.png?" width="600" height="200"/>
+<img src="images/yw_equations_for_1.png?" width="600" height="200"/>
 
 ### Matrix Form
 
