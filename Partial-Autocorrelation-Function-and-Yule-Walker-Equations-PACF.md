@@ -113,6 +113,59 @@ Breaking down the components: <br />
 - $φ$: This is the vector of AR coefficients we want to estimate.
 
 The equation $b = Rφ$ represents the Yule-Walker equations in matrix form. To solve for $φ$, we use the inverse of $R: R^(-1)b = φ$.
+```
+import numpy as np
+import matplotlib.pyplot as plt
+from statsmodels.tsa.arima_process import arma_generate_sample
+
+# Generate an AR(2) process
+np.random.seed(42)
+ar_params = np.array([0.6, -0.3])
+ma_params = np.array([1])
+ar = np.r_[1, -ar_params]
+ma = np.r_[1, ma_params]
+n_samples = 1000
+y = arma_generate_sample(ar, ma, n_samples)
+
+# Calculate autocorrelations
+def autocorr(x, lags):
+    mean = np.mean(x)
+    var = np.var(x)
+    xp = x - mean
+    corr = [1. if l == 0 else np.sum(xp[l:] * xp[:-l]) / (len(x) * var) for l in range(lags + 1)]
+    return np.array(corr)
+
+# Set AR order
+p = 2
+
+# Calculate autocorrelations
+autocorrelations = autocorr(y, p)
+
+# Construct b vector
+b = autocorrelations[1:p+1]
+
+# Construct R matrix
+R = np.zeros((p, p))
+for i in range(p):
+    for j in range(p):
+        R[i, j] = autocorrelations[abs(i - j)]
+
+# Solve Yule-Walker equations
+phi_estimate = np.linalg.solve(R, b)
+
+print("True AR parameters:", ar_params)
+print("Estimated AR parameters:", phi_estimate)
+
+# Plot the time series
+plt.figure(figsize=(12, 6))
+plt.plot(y)
+plt.title('AR(2) Process')
+plt.xlabel('Time')
+plt.ylabel('Value')
+plt.show()
+```
+
+
 <img src="images/yw_equation_sample_acf.png?" width="600" height="300"/>
 
 
