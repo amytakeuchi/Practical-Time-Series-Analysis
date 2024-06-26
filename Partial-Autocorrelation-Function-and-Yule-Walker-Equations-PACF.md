@@ -104,6 +104,10 @@ plt.show()
 <img src="images/yw_equations_for_1.png?" width="600" height="200"/>
 
 ### Matrix Form
+<img src="images/yw_equation_matrix_form.png?" width="600" height="300"/>
+This presents the matrix form of the Yule-Walker equations, which are used to estimate the parameters of an autoregressive (AR) model in time series analysis.
+<img src="images/yw_equation_sample_acf.png?" width="600" height="300"/>
+
 
 ### Example - AR(2)
 
