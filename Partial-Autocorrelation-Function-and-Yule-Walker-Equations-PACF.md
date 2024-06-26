@@ -106,7 +106,7 @@ plt.show()
 ### Matrix Form
 <img src="images/yw_equation_matrix_form.png?" width="600" height="300"/>
 This presents the matrix form of the Yule-Walker equations, which are used to estimate the parameters of an autoregressive (AR) model in time series analysis. <br /> 
-Breaking down the components: <br /> 
+Breaking down the components: 
 - $b$: This is the vector of autocorrelations from lag 1 to p.
 - $R$: This is the autocorrelation matrix.
 - $φ$: This is the vector of AR coefficients we want to estimate.
