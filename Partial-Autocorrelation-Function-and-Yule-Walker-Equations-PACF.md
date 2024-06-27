@@ -35,6 +35,7 @@ For lag $k$, the partial autocorrelation $φ_kk$ is: <br />
 <br /> 
 $φ_kk = Corr(X_t, X_{t-k} | X_{t-1}, ..., X_{t-k+1})$ 
 <br /> 
+<br /> 
 This represents the correlation between $X_t$ and $X_{t-k}$, controlling for the effects of intermediate lags. <br /> 
 
 ```
@@ -163,7 +164,7 @@ plt.xlabel('Time')
 plt.ylabel('Value')
 plt.show()
 ```
-
+<img src="images/yw_sample_ar.png?" width="600" height="300"/>
 
 <img src="images/yw_equation_sample_acf.png?" width="600" height="300"/>
 
