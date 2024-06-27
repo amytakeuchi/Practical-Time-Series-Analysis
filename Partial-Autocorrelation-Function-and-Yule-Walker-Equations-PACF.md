@@ -31,10 +31,9 @@ c) Distinguish between AR and MA (Moving Average) processes <br />
 
 **Formula:** <br /> 
 The formula for PACF is more complex than for regular autocorrelation. It's typically calculated recursively using the Durbin-Levinson algorithm or solving the Yule-Walker equations. <br /> 
-<br /> 
 For lag $k$, the partial autocorrelation $φ_kk$ is: <br /> 
 <br /> 
-$φ_kk = Corr(X_t, X_{t-k} | X_{t-1}, ..., X_{t-k+1})$ <br /> 
+$φ_kk = Corr(X_t, X_{t-k} | X_{t-1}, ..., X_{t-k+1})$ 
 <br /> 
 This represents the correlation between $X_t$ and $X_{t-k}$, controlling for the effects of intermediate lags. <br /> 
 
