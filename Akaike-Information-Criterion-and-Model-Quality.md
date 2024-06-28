@@ -86,5 +86,7 @@ plt.show()
 print(best_results.summary())
 ```
 output: <br /> 
-
+<img src="images/aic_print.png?" width="300" height="300"/>
+<img src="images/aic_results.png?" width="600" height="300"/>
+<img src="images/aic_sarimax_results.png?" width="500" height="300"/>
 
