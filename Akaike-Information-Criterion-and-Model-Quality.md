@@ -120,7 +120,7 @@ The last two columns show the 95% confidence intervals for each parameter
 - Heteroskedasticity (H): 1.02, Prob(H): 0.87 - This suggests homoskedasticity (constant variance) in the residuals
 - Skew: 0.12 and Kurtosis: 3.07 - These are close to values expected for a normal distribution
 <br /> 
-Interpretation: 
+Interpretation: <br /> 
 - The model fits an ARIMA(2,0,1) process, suggesting the time series depends on its two previous values and the previous error term.
 - All AR and MA terms are statistically significant, indicating they contribute meaningfully to the model.
 - The constant term is not significant, suggesting the process might not have a significant drift.
