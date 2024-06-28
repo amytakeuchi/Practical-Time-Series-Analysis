@@ -110,7 +110,6 @@ Interpretation of the result: <br />
 3. Statistical Significance: <br /> 
 The z-score and P>|z| columns show the statistical significance of each parameter
 ar.L1, ar.L2, and ma.L1 are all significant (p-values < 0.05)
-<br />
 <br /> 
 4. Confidence Intervals: <br /> 
 The last two columns show the 95% confidence intervals for each parameter
