@@ -17,8 +17,10 @@ Where: <br />
 - $k$ is the number of parameters in the model
 - $L$ is the maximum value of the likelihood function for the model
 <br /> 
-For linear regression models (including many time series models), AIC is often calculated as: <br /> 
+For linear regression models (including many time series models), AIC is often calculated as: <br />
+<br /> 
 $AIC = 2k + n * ln(RSS/n)$
+<br /> 
 Where:
 - n is the number of observations
 - RSS is the residual sum of squares
