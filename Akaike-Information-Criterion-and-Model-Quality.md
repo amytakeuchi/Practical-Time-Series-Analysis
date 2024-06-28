@@ -110,17 +110,17 @@ Interpretation of the result: <br />
 3. Statistical Significance: <br /> 
 The z-score and P>|z| columns show the statistical significance of each parameter
 ar.L1, ar.L2, and ma.L1 are all significant (p-values < 0.05)
-<br /> 
+
 4. Confidence Intervals: <br /> 
 The last two columns show the 95% confidence intervals for each parameter
-<br />
-5. Diagnostic Tests:<br /> 
+
+6. Diagnostic Tests:
 - Ljung-Box (Q): 0.00, Prob(Q): 0.95 - This suggests no significant autocorrelation in the residuals
 - Jarque-Bera (JB): 2.49, Prob(JB): 0.29 - This indicates the residuals are normally distributed
 - Heteroskedasticity (H): 1.02, Prob(H): 0.87 - This suggests homoskedasticity (constant variance) in the residuals
 - Skew: 0.12 and Kurtosis: 3.07 - These are close to values expected for a normal distribution
 <br /> 
-Interpretation: <br /> 
+Interpretation: 
 - The model fits an ARIMA(2,0,1) process, suggesting the time series depends on its two previous values and the previous error term.
 - All AR and MA terms are statistically significant, indicating they contribute meaningfully to the model.
 - The constant term is not significant, suggesting the process might not have a significant drift.
