@@ -18,7 +18,7 @@ Where: <br />
 - $L$ is the maximum value of the likelihood function for the model
 <br /> 
 For linear regression models (including many time series models), AIC is often calculated as: <br />
-<br /> $AIC = 2k + n * ln(RSS/n)$
+$AIC = 2k + n * ln(RSS/n)$
 <br />
 Where:
 - n is the number of observations
@@ -90,3 +90,40 @@ output: <br />
 <img src="images/aic_results.png?" width="600" height="300"/>
 <img src="images/aic_sarimax_results.png?" width="500" height="300"/>
 
+Interpretation of the result: <br /> 
+1. Model Information: <br /> 
+- Dependent Variable: value
+- Model: ARIMA(2,0,1) - This means 2 autoregressive terms, 0 differencing, and 1 moving average term
+- Number of Observations: 1000
+- Log Likelihood: -1397.748
+- AIC: 2805.497 (Akaike Information Criterion)
+- BIC: 2830.036 (Bayesian Information Criterion)
+- HQIC: 2814.823 (Hannan-Quinn Information Criterion)
+
+2. Coefficient Estimates: <br /> 
+- const: 0.0423 (not statistically significant as p-value > 0.05)
+- ar.L1: 0.5924 (statistically significant)
+- ar.L2: -0.1960 (statistically significant)
+- ma.L1: 0.3021 (statistically significant)
+- sigma2: 0.9577 (variance of the error term)
+
+3. Statistical Significance: <br /> 
+The z-score and P>|z| columns show the statistical significance of each parameter
+ar.L1, ar.L2, and ma.L1 are all significant (p-values < 0.05)
+<br />
+<br /> 
+4. Confidence Intervals: <br /> 
+The last two columns show the 95% confidence intervals for each parameter
+<br />
+5. Diagnostic Tests:<br /> 
+- Ljung-Box (Q): 0.00, Prob(Q): 0.95 - This suggests no significant autocorrelation in the residuals
+- Jarque-Bera (JB): 2.49, Prob(JB): 0.29 - This indicates the residuals are normally distributed
+- Heteroskedasticity (H): 1.02, Prob(H): 0.87 - This suggests homoskedasticity (constant variance) in the residuals
+- Skew: 0.12 and Kurtosis: 3.07 - These are close to values expected for a normal distribution
+<br /> 
+Interpretation: <br /> 
+- The model fits an ARIMA(2,0,1) process, suggesting the time series depends on its two previous values and the previous error term.
+- All AR and MA terms are statistically significant, indicating they contribute meaningfully to the model.
+- The constant term is not significant, suggesting the process might not have a significant drift.
+- Diagnostic tests suggest the model residuals are well-behaved (no autocorrelation, normally distributed, homoskedastic).
+- The AIC, BIC, and HQIC can be used to compare this model with other potential models - lower values indicate better fit.
