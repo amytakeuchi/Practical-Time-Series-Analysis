@@ -114,3 +114,8 @@ Note that we're still using the ARIMA function, but with order (2,0,1), which is
 
 #ARIMA Method
 ## Before ARIMA: Revision:
+<img src="images/ARIMA_revision.png?" width="600" height="300"/>
+<img src="images/ARIMA_revision_2.png?" width="600" height="300"/>
+<img src="images/ARIMA_revision_3.png?" width="600" height="300"/>
+<img src="images/ARIMA_revisions_4.png?" width="600" height="300"/>
+<img src="images/ARIMA_revision_5.png?" width="600" height="300"/>
