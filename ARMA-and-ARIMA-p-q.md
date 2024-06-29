@@ -180,6 +180,7 @@ t
 MA (Moving Average) Method: Models the current value of the time series as a linear combination of past forecast errors.
 
  <img src="images/arima_modeling.png?" width="600" height="300"/>
+ <br /> 
 ```
 import numpy as np
 import pandas as pd
