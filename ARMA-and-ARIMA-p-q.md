@@ -285,6 +285,7 @@ plt.legend()
 plt.title('ARIMA Model: Original, Fitted, and Forecast')
 plt.show()
 ```
+<br /> 
 <img src="images/arima_fitting.png?" width="600" height="300"/>
 <img src="images/arima_fitting_2.png?" width="900" height="300"/>
 <img src="images/arima_fitting_3.png?" width="900" height="300"/>
@@ -295,3 +296,13 @@ This modified code adds several new visualizations: <br />
 - **Q-Q plot of Residuals**: This plot helps check if the residuals are normally distributed. If the points closely follow the diagonal line, it suggests the residuals are approximately normally distributed.
 - **ACF of Residuals**: This plot helps check if there's any remaining autocorrelation in the residuals. Ideally, all lags (except lag 0) should be within the blue confidence bands.
 - **Original, Fitted, and Forecast**: This final plot combines the original data, the fitted values, and the forecast, giving a comprehensive view of the model's performance.
+
+## Ljung-Box Q-statistic
+**What is Ljung-Box Q-statistic?**
+- The Ljung-Box Q-statistic is a test statistic used to check **whether a group of autocorrelations of the residuals are significantly different from zero.** In other words, it tests for the presence of serial correlation in the residuals of a fitted time series model.
+
+**How is it used in time series analysis?**
+It's primarily used to: <br /> 
+a) Check if the residuals of a fitted model are independently distributed (i.e., no autocorrelation).
+b) Assess the adequacy of a time series model.
+c) Determine if there's any remaining pattern in the residuals that the model hasn't captured.
