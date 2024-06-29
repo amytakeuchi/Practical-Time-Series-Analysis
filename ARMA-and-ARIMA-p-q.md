@@ -138,5 +138,11 @@ The ARIMA(p, q) model is a simplification where we assume $d$ =0. Thus, the mode
 
 **Formula** <br /> 
 The general ARIMA($p, q$) model can be expressed as:
+<br /> 
+$yt = c+∑i=1 pϕi yt−i +∑ j=1 q θj ϵt−j + ϵt$
+<br /> 
+​
+ 
+
 
 
