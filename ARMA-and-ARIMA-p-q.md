@@ -16,7 +16,7 @@ ARMA stands for AutoRegressive Moving Average. It's a model that combines two co
 - q is the order of the moving average term
 - It models the dependency between an observation and a residual error from a moving average model applied to lagged observations
 
-**Formula**:
+**Formula**: <br /> 
 <img src="images/arma_definition_3.png?" width="500" height="200"/>
 <br /> 
 The ARMA(p,q) model can be written as: <br /> 
