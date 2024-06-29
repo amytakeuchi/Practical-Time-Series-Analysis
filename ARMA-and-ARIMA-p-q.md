@@ -103,4 +103,8 @@ ax2.set_ylabel('Frequency')
 plt.tight_layout()
 plt.show()
 ```
+<img src="images/arma_results.png?" width="300" height="300"/>
+<img src="images/arma_results_2.png?" width="600" height="300"/>
+<img src="images/arma_results_3.png?" width="600" height="300"/>
+<img src="images/arma_results_4.png?" width="600" height="500"/>
 
