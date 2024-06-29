@@ -141,7 +141,45 @@ The general ARIMA($p, q$) model can be expressed as:
 <br /> 
 $yt = c+∑i=1 pϕi yt−i +∑ j=1 q θj ϵt−j + ϵt$
 <br /> 
+​Where:
+- $yt$ is the actual value at time $t$.
+- c is a constant term.
+- $ϕi$ are the coefficients of the AR terms.
+- $θj$ are the coefficients of the MA terms.
+- $ϵt$ is the white noise error term at time $t$.
+<br /> 
+**AR and MA Methods Relationship**
+AR (AutoRegressive) Method: Models the current value of the time series as a linear combination of its past values.
+
+For example, AR(1): 
+𝑦
+𝑡
+=
+𝜙
+1
+𝑦
+𝑡
+−
+1
++
+𝜖
+𝑡
+y 
+t
 ​
+ =ϕ 
+1
+​
+ y 
+t−1
+​
+ +ϵ 
+t
+​
+ 
+MA (Moving Average) Method: Models the current value of the time series as a linear combination of past forecast errors.
+
+
  
 
 
