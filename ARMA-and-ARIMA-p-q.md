@@ -41,24 +41,25 @@ Where:
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-from statsmodels.tsa.arima.model import ARIMA
 from statsmodels.tsa.arima_process import arma_generate_sample
+from statsmodels.tsa.arima.model import ARIMA
 
 # Set random seed for reproducibility
 np.random.seed(42)
 
 # Generate ARMA(2,1) process
-ar = np.array([1, -0.6, 0.2])  # AR(2) coefficients
-ma = np.array([1, 0.3])        # MA(1) coefficients
+ar_params = np.array([1, -0.6, 0.2])  # AR(2) coefficients
+ma_params = np.array([1, 0.3])        # MA(1) coefficients
 n_samples = 1000
 
-y = arma_generate_sample(ar, ma, n_samples)
+y = arma_generate_sample(ar_params, ma_params, n_samples)
 
 # Create a DataFrame
 df = pd.DataFrame(y, columns=['value'])
 
 # Fit ARMA model
-model = ARIMA(df['value'], order=(2, 0, 1))  # ARMA(2,1) is equivalent to ARIMA(2,0,1)
+# Note: We use ARIMA with order (p,0,q) which is equivalent to ARMA(p,q)
+model = ARIMA(df['value'], order=(2, 0, 1))  # ARMA(2,1)
 results = model.fit()
 
 # Print summary
@@ -81,6 +82,25 @@ plt.plot(df.index, df['value'], label='Original')
 plt.plot(range(1000, 1050), forecast, color='red', label='Forecast')
 plt.legend()
 plt.title('ARMA(2,1) Process and Forecast')
+plt.show()
+
+# Analyze residuals
+residuals = results.resid
+fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(12, 8))
+
+# Plot residuals
+ax1.plot(residuals)
+ax1.set_title('Residuals of ARMA(2,1) Model')
+ax1.set_xlabel('Time')
+ax1.set_ylabel('Residual')
+
+# Plot residual histogram
+ax2.hist(residuals, bins=30)
+ax2.set_title('Histogram of Residuals')
+ax2.set_xlabel('Residual Value')
+ax2.set_ylabel('Frequency')
+
+plt.tight_layout()
 plt.show()
 ```
 
