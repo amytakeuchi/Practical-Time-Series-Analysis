@@ -227,5 +227,5 @@ plt.show()
 <img src="images/arima_modeling_viz.png?" width="600" height="300"/>
 <img src="images/arima_modeling_viz_2.png?" width="600" height="300"/>
 <img src="images/arima_modeling_viz_3.png?" width="600" height="300"/>
-<img src="images/arima_modeling_viz_4.png?" width="600" height="300"/>
+<img src="images/arima_modeling_viz_forecast.png?" width="600" height="300"/>
 
