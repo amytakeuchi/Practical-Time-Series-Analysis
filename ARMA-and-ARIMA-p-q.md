@@ -1,9 +1,9 @@
 # ARMA
 
 ## What is ARMA (p, q) Models
-<img src="images/arma_definition.png?" width="400" height="200"/>
-<img src="images/arma_definition_2.png?" width="400" height="200"/>
-<br /> 
+<img src="images/arma_definition.png?" width="500" height="300"/>
+<img src="images/arma_definition_2.png?" width="500" height="300"/>
+
 ARMA stands for AutoRegressive Moving Average. It's a model that combines two components: 
 - AR(p): AutoRegressive component of order p
 - MA(q): Moving Average component of order q
