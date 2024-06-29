@@ -133,10 +133,10 @@ ARIMA, which stands for AutoRegressive Integrated Moving Average, is a widely us
 - **MA(q)**: The Moving Average part involves modeling the error term as a linear combination of lagged forecast errors. The parameter 
   $q$ indicates the number of lagged forecast errors in the model.
 
-**ARIMA(p, q) Simplification**
+**ARIMA(p, q) Simplification** <br /> 
 The ARIMA(p, q) model is a simplification where we assume $d$ =0. Thus, the model combines the AR and MA parts without any differencing.
 
-**Formula**
+**Formula** <br /> 
 The general ARIMA($p, q$) model can be expressed as:
 
 
