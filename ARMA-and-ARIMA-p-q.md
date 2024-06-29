@@ -7,7 +7,7 @@
 ARMA stands for AutoRegressive Moving Average. It's a model that combines two components: 
 - AR(p): AutoRegressive component of order p
 - MA(q): Moving Average component of order q
-<br /> 
+
 AR(p) Component:
 - p is the order of the autoregressive term
 - It models the dependency between an observation and a certain number (p) of lagged observations
