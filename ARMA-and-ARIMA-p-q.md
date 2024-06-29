@@ -182,6 +182,7 @@ MA (Moving Average) Method: Models the current value of the time series as a lin
  <img src="images/arima_modeling.png?" width="600" height="300"/>
  <br /> 
 ```
+
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
