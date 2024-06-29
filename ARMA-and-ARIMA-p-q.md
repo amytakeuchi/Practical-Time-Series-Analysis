@@ -37,3 +37,50 @@ Where:
 - AR models assume the current value depends directly on past values
 - MA models assume the current value depends on past forecast errors
 - ARMA combines both, allowing for more flexible modeling of complex time series
+```
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from statsmodels.tsa.arima.model import ARIMA
+from statsmodels.tsa.arima_process import arma_generate_sample
+
+# Set random seed for reproducibility
+np.random.seed(42)
+
+# Generate ARMA(2,1) process
+ar = np.array([1, -0.6, 0.2])  # AR(2) coefficients
+ma = np.array([1, 0.3])        # MA(1) coefficients
+n_samples = 1000
+
+y = arma_generate_sample(ar, ma, n_samples)
+
+# Create a DataFrame
+df = pd.DataFrame(y, columns=['value'])
+
+# Fit ARMA model
+model = ARIMA(df['value'], order=(2, 0, 1))  # ARMA(2,1) is equivalent to ARIMA(2,0,1)
+results = model.fit()
+
+# Print summary
+print(results.summary())
+
+# Plot original series and fitted values
+plt.figure(figsize=(12,6))
+plt.plot(df.index, df['value'], label='Original')
+plt.plot(df.index, results.fittedvalues, color='red', label='Fitted')
+plt.legend()
+plt.title('ARMA(2,1) Process and Fitted Model')
+plt.show()
+
+# Forecast next 50 steps
+forecast = results.forecast(steps=50)
+
+# Plot forecast
+plt.figure(figsize=(12,6))
+plt.plot(df.index, df['value'], label='Original')
+plt.plot(range(1000, 1050), forecast, color='red', label='Forecast')
+plt.legend()
+plt.title('ARMA(2,1) Process and Forecast')
+plt.show()
+```
+
