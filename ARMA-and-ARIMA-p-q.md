@@ -108,3 +108,5 @@ plt.show()
 <img src="images/arma_results_3.png?" width="600" height="300"/>
 <img src="images/arma_results_4.png?" width="600" height="500"/>
 
+Note that we're still using the ARIMA function, but with order (2,0,1), which is equivalent to ARMA(2,1). This is because statsmodels implements ARMA as a special case of ARIMA.
+
