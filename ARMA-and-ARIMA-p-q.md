@@ -180,6 +180,47 @@ t
 MA (Moving Average) Method: Models the current value of the time series as a linear combination of past forecast errors.
 
  <img src="images/arima_modeling.png?" width="600" height="300"/>
+```
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from statsmodels.tsa.arima.model import ARIMA
+from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
 
+# Generate sample data
+np.random.seed(0)
+dates = pd.date_range(start='2000', periods=100, freq='M')
+y = pd.Series(np.cumsum(np.random.randn(100)), index=dates)
+
+# Plot the data
+plt.figure(figsize=(12,6))
+plt.plot(y)
+plt.title('Sample Time Series Data')
+plt.show()
+
+# Plot ACF and PACF
+fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(12, 8))
+plot_acf(y, ax=ax1)
+plot_pacf(y, ax=ax2)
+plt.show()
+
+# Fit ARIMA model
+model = ARIMA(y, order=(1,1,1))
+results = model.fit()
+
+# Print summary
+print(results.summary())
+
+# Forecast
+forecast = results.forecast(steps=12)
+
+# Plot forecast
+plt.figure(figsize=(12,6))
+plt.plot(y, label='Observed')
+plt.plot(pd.date_range(start=y.index[-1], periods=13, freq='M')[1:], forecast, label='Forecast')
+plt.legend()
+plt.title('ARIMA Forecast')
+plt.show()
+```
 
 
