@@ -112,7 +112,7 @@ Note that we're still using the ARIMA function, but with order (2,0,1), which is
 
 ## ARMA Example
 
-# ARIMA Method
+# ARIMA(p,d,q) Method
 ## Before ARIMA: Revision:
 <img src="images/ARIMA_revision.png?" width="600" height="200"/>
 <img src="images/ARIMA_revision_2.png?" width="600" height="300"/>
@@ -124,62 +124,33 @@ Note that we're still using the ARIMA function, but with order (2,0,1), which is
 <img src="images/arima_definition.png?" width="600" height="300"/>
 <img src="images/arima_definition_2.png?" width="600" height="200"/>
 <img src="images/arima_definition_3.png?" width="600" height="200"/>
-ARIMA, which stands for AutoRegressive Integrated Moving Average, is a widely used statistical method for time series forecasting. It combines three key aspects:
-- AR (AutoRegressive)
-- I (Integrated)
-- MA (Moving Average)
+ARIMA(p,d,q), which stands for AutoRegressive Integrated Moving Average, is a widely used statistical method for time series forecasting. It combines three key aspects:
 
-**Components**
-- **AR(p)**: The AutoRegressive part involves regressing the variable on its own lagged (past) values. The parameter $p$ indicates the number of lagged observations included in the model.
-- **I(d)**: The Integrated part involves differencing the data to make it stationary (i.e., to remove trends and seasonality). The parameter 
-  $d$ indicates the number of times the data needs to be differenced.
-- **MA(q)**: The Moving Average part involves modeling the error term as a linear combination of lagged forecast errors. The parameter 
-  $q$ indicates the number of lagged forecast errors in the model.
+**Components of ARIMA(p,d,q):**
+- $AR(p)$: AutoRegressive component
+-- $p$ is the order of the autoregressive term
+-- It uses past values to predict the current value
+- $I(d)$: Integrated component
+-- $d$ is the degree of differencing required to make the time series stationary
+-- Differencing involves computing differences between consecutive observations
+- $MA(q)$: Moving Average component
+-- $q$ is the order of the moving average term
+-- It uses past forecast errors in a regression-like model
 
-**ARIMA(p, q) Simplification** <br /> 
+**ARIMA(p,d,q) Simplification** <br /> 
 The ARIMA(p, q) model is a simplification where we assume $d$ =0. Thus, the model combines the AR and MA parts without any differencing.
 
 **Formula** <br /> 
-The general ARIMA($p, q$) model can be expressed as:
+For an ARIMA(p,d,q) model:
 <br /> 
-$yt = c+∑i=1 pϕi yt−i +∑ j=1 q θj ϵt−j + ϵt$
-<br /> 
+$(1 - Σφᵢ Lⁱ)(1 - L)ᵈ Yₜ = (1 + Σθⱼ Lʲ)εₜ$
+<br />
 ​Where:
-- $yt$ is the actual value at time $t$.
-- c is a constant term.
-- $ϕi$ are the coefficients of the AR terms.
-- $θj$ are the coefficients of the MA terms.
-- $ϵt$ is the white noise error term at time $t$.
+- $L$ is the lag operator
+- $φᵢ$ are the parameters of the AR term
+- $θⱼ$ are the parameters of the MA term
+- $εₜ$ is white noise
 <br /> 
-**AR and MA Methods Relationship**
-AR (AutoRegressive) Method: Models the current value of the time series as a linear combination of its past values. <br /> 
-For example, AR(1): 
-𝑦
-𝑡
-=
-𝜙
-1
-𝑦
-𝑡
-−
-1
-+
-𝜖
-𝑡
-y 
-t
-​
- =ϕ 
-1
-​
- y 
-t−1
-​
- +ϵ 
-t
-MA (Moving Average) Method: Models the current value of the time series as a linear combination of past forecast errors.
-
- <img src="images/arima_modeling.png?" width="600" height="300"/>
 
 **How to use ARIMA in time series analysis:**
 - Check if the series is stationary. If not, difference it until it becomes stationary.
@@ -313,10 +284,10 @@ plt.legend()
 plt.title('ARIMA Model: Original, Fitted, and Forecast')
 plt.show()
 ```
-<img src="arima_fitting.png?" width="600" height="300"/>
-<img src="arima_fitting_2.png?" width="900" height="300"/>
-<img src="arima_fitting_3.png?" width="900" height="300"/>
-<img src="arima_fitting_4.png?" width="600" height="300"/>
+<img src="images/arima_fitting.png?" width="600" height="300"/>
+<img src="images/arima_fitting_2.png?" width="900" height="300"/>
+<img src="images/arima_fitting_3.png?" width="900" height="300"/>
+<img src="images/arima_fitting_4.png?" width="600" height="300"/>
 This modified code adds several new visualizations:
 - **Original vs Fitted**: This plot shows how well the model fits the original data. The closer the red line (fitted values) is to the blue line (original data), the better the fit.
 - **Residuals over Time**: This plot helps identify any patterns in the residuals. Ideally, the residuals should look like random noise with no clear pattern.
