@@ -313,7 +313,10 @@ plt.legend()
 plt.title('ARIMA Model: Original, Fitted, and Forecast')
 plt.show()
 ```
-
+<img src="arima_fitting.png?" width="600" height="300"/>
+<img src="arima_fitting_2.png?" width="900" height="300"/>
+<img src="arima_fitting_3.png?" width="900" height="300"/>
+<img src="arima_fitting_4.png?" width="600" height="300"/>
 This modified code adds several new visualizations:
 - **Original vs Fitted**: This plot shows how well the model fits the original data. The closer the red line (fitted values) is to the blue line (original data), the better the fit.
 - **Residuals over Time**: This plot helps identify any patterns in the residuals. Ideally, the residuals should look like random noise with no clear pattern.
