@@ -27,3 +27,13 @@ Where:
 - $ε_t$ is white noise
 - $φ_i$ are the parameters of the AR term
 - $θ_i$ are the parameters of the MA term
+
+**ARMA models are used to:** <br /> 
+- Understand the underlying process of a time series
+- Make forecasts of future values
+- Remove autocorrelation from residuals in regression analysis
+
+**Relationship between AR and MA:** <br /> 
+- AR models assume the current value depends directly on past values
+- MA models assume the current value depends on past forecast errors
+- ARMA combines both, allowing for more flexible modeling of complex time series
