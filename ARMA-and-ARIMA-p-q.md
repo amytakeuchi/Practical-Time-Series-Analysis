@@ -141,10 +141,11 @@ ARIMA(p,d,q), which stands for AutoRegressive Integrated Moving Average, is a wi
 The ARIMA(p, q) model is a simplification where we assume $d$ =0. Thus, the model combines the AR and MA parts without any differencing.
 
 **Formula** <br /> 
-For an ARIMA(p,d,q) model:
+For an ARIMA(p,d,q) model: <br /> 
 <br /> 
 $(1 - Σφᵢ Lⁱ)(1 - L)ᵈ Yₜ = (1 + Σθⱼ Lʲ)εₜ$
 <br />
+<br /> 
 ​Where:
 - $L$ is the lag operator
 - $φᵢ$ are the parameters of the AR term
@@ -288,7 +289,7 @@ plt.show()
 <img src="images/arima_fitting_2.png?" width="900" height="300"/>
 <img src="images/arima_fitting_3.png?" width="900" height="300"/>
 <img src="images/arima_fitting_4.png?" width="600" height="300"/>
-This modified code adds several new visualizations:
+This modified code adds several new visualizations: <br /> 
 - **Original vs Fitted**: This plot shows how well the model fits the original data. The closer the red line (fitted values) is to the blue line (original data), the better the fit.
 - **Residuals over Time**: This plot helps identify any patterns in the residuals. Ideally, the residuals should look like random noise with no clear pattern.
 - **Q-Q plot of Residuals**: This plot helps check if the residuals are normally distributed. If the points closely follow the diagonal line, it suggests the residuals are approximately normally distributed.
