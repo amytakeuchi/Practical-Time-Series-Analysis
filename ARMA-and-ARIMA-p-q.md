@@ -180,6 +180,14 @@ t
 MA (Moving Average) Method: Models the current value of the time series as a linear combination of past forecast errors.
 
  <img src="images/arima_modeling.png?" width="600" height="300"/>
+
+**How to use ARIMA in time series analysis:**
+- Check if the series is stationary. If not, difference it until it becomes stationary.
+- Identify potential p and q values using ACF and PACF plots.
+- Fit several ARIMA models with different p, d, and q values.
+- Select the best model based on AIC, BIC, or another criterion.
+- Check the model's residuals for any remaining autocorrelation.
+- Use the model for forecasting.
  
 ```
 import numpy as np
@@ -228,4 +236,87 @@ plt.show()
 <img src="images/arima_modeling_viz_2.png?" width="600" height="300"/>
 <img src="images/arima_modeling_viz_3.png?" width="600" height="300"/>
 <img src="images/arima_modeling_viz_forecast.png?" width="600" height="300"/>
+This code:
+- Generates a non-stationary time series
+- Plots ACF and PACF to help identify p and q
+- Fits an ARIMA(1,1,1) model
+- Prints the model summary
+- Forecasts the next 12 periods
+- Plots the original series and the forecast
 
+The relationship between AR and MA:
+- AR models assume the current value depends directly on past values
+- MA models assume the current value depends on past forecast errors
+- ARIMA combines both, allowing for more flexible modeling of complex time series, and adds differencing to handle non-stationarity
+
+**Some visualizations to assess the fit of the model versus the original time series data:**
+- The original data with the fitted values
+- The residuals over time
+- A Q-Q plot of the residuals to check for normality
+- The ACF of the residuals to check for remaining autocorrelation
+```
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from statsmodels.tsa.arima.model import ARIMA
+from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
+from scipy import stats
+
+# Generate sample data
+np.random.seed(0)
+dates = pd.date_range(start='2000', periods=100, freq='M')
+y = pd.Series(np.cumsum(np.random.randn(100)), index=dates)
+
+# Fit ARIMA model
+model = ARIMA(y, order=(1,1,1))
+results = model.fit()
+
+# Print summary
+print(results.summary())
+
+# Create a figure with subplots
+fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2, figsize=(16, 12))
+
+# 1. Original data with fitted values
+ax1.plot(y, label='Original')
+ax1.plot(results.fittedvalues, color='red', label='Fitted')
+ax1.set_title('Original vs Fitted')
+ax1.legend()
+
+# 2. Residuals over time
+residuals = results.resid
+ax2.plot(residuals)
+ax2.set_title('Residuals over Time')
+ax2.set_xlabel('Date')
+ax2.set_ylabel('Residual')
+
+# 3. Q-Q plot of residuals
+stats.probplot(residuals, dist="norm", plot=ax3)
+ax3.set_title("Q-Q plot of Residuals")
+
+# 4. ACF of residuals
+plot_acf(residuals, ax=ax4)
+ax4.set_title('ACF of Residuals')
+
+plt.tight_layout()
+plt.show()
+
+# Forecast
+forecast = results.forecast(steps=12)
+
+# Plot forecast
+plt.figure(figsize=(12,6))
+plt.plot(y, label='Observed')
+plt.plot(results.fittedvalues, color='red', label='Fitted')
+plt.plot(pd.date_range(start=y.index[-1], periods=13, freq='M')[1:], forecast, color='green', label='Forecast')
+plt.legend()
+plt.title('ARIMA Model: Original, Fitted, and Forecast')
+plt.show()
+```
+
+This modified code adds several new visualizations:
+- **Original vs Fitted**: This plot shows how well the model fits the original data. The closer the red line (fitted values) is to the blue line (original data), the better the fit.
+- **Residuals over Time**: This plot helps identify any patterns in the residuals. Ideally, the residuals should look like random noise with no clear pattern.
+- **Q-Q plot of Residuals**: This plot helps check if the residuals are normally distributed. If the points closely follow the diagonal line, it suggests the residuals are approximately normally distributed.
+- **ACF of Residuals**: This plot helps check if there's any remaining autocorrelation in the residuals. Ideally, all lags (except lag 0) should be within the blue confidence bands.
+- **Original, Fitted, and Forecast**: This final plot combines the original data, the fitted values, and the forecast, giving a comprehensive view of the model's performance.
