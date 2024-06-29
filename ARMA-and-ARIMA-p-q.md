@@ -110,3 +110,6 @@ plt.show()
 
 Note that we're still using the ARIMA function, but with order (2,0,1), which is equivalent to ARMA(2,1). This is because statsmodels implements ARMA as a special case of ARIMA.
 
+## ARMA Example
+
+#ARIMA Method
