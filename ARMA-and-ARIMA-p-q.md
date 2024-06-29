@@ -121,6 +121,9 @@ Note that we're still using the ARIMA function, but with order (2,0,1), which is
 <img src="images/ARIMA_revision_5.png?" width="600" height="300"/>
 
 ## ARIMA Method Definition
+<img src="images/arima_definition.png?" width="600" height="300"/>
+<img src="images/arima_definition_2.png?" width="600" height="200"/>
+<img src="images/arima_definition_3.png?" width="600" height="200"/>
 ARIMA, which stands for AutoRegressive Integrated Moving Average, is a widely used statistical method for time series forecasting. It combines three key aspects:
 - AR (AutoRegressive)
 - I (Integrated)
@@ -149,8 +152,7 @@ $yt = c+∑i=1 pϕi yt−i +∑ j=1 q θj ϵt−j + ϵt$
 - $ϵt$ is the white noise error term at time $t$.
 <br /> 
 **AR and MA Methods Relationship**
-AR (AutoRegressive) Method: Models the current value of the time series as a linear combination of its past values.
-
+AR (AutoRegressive) Method: Models the current value of the time series as a linear combination of its past values. <br /> 
 For example, AR(1): 
 𝑦
 𝑡
@@ -175,12 +177,9 @@ t−1
 ​
  +ϵ 
 t
-​
- 
 MA (Moving Average) Method: Models the current value of the time series as a linear combination of past forecast errors.
 
-
- 
+ <img src="images/arima_modeling.png?" width="600" height="300"/>
 
 
 
