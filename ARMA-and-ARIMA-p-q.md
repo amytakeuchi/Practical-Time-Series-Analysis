@@ -112,10 +112,23 @@ Note that we're still using the ARIMA function, but with order (2,0,1), which is
 
 ## ARMA Example
 
-#ARIMA Method
+# ARIMA Method
 ## Before ARIMA: Revision:
 <img src="images/ARIMA_revision.png?" width="600" height="200"/>
 <img src="images/ARIMA_revision_2.png?" width="600" height="300"/>
 <img src="images/ARIMA_revision_3.png?" width="600" height="200"/>
 <img src="images/ARIMA_revision_4.png?" width="600" height="200"/>
 <img src="images/ARIMA_revision_5.png?" width="600" height="300"/>
+
+## ARIMA Method Definition
+ARIMA, which stands for AutoRegressive Integrated Moving Average, is a widely used statistical method for time series forecasting. It combines three key aspects:
+- AR (AutoRegressive)
+- I (Integrated)
+- MA (Moving Average)
+
+**Components**
+- AR(p): The AutoRegressive part involves regressing the variable on its own lagged (past) values. The parameter $p$ indicates the number of lagged observations included in the model.
+- I(d): The Integrated part involves differencing the data to make it stationary (i.e., to remove trends and seasonality). The parameter 
+  $d$ indicates the number of times the data needs to be differenced.
+- MA(q): The Moving Average part involves modeling the error term as a linear combination of lagged forecast errors. The parameter 
+  $q$ indicates the number of lagged forecast errors in the model.
