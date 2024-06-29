@@ -128,14 +128,14 @@ ARIMA(p,d,q), which stands for AutoRegressive Integrated Moving Average, is a wi
 
 **Components of ARIMA(p,d,q):**
 - $AR(p)$: AutoRegressive component
--- $p$ is the order of the autoregressive term
--- It uses past values to predict the current value
+  - $p$ is the order of the autoregressive term
+  - It uses past values to predict the current value
 - $I(d)$: Integrated component
--- $d$ is the degree of differencing required to make the time series stationary
--- Differencing involves computing differences between consecutive observations
+  - $d$ is the degree of differencing required to make the time series stationary
+  - Differencing involves computing differences between consecutive observations
 - $MA(q)$: Moving Average component
--- $q$ is the order of the moving average term
--- It uses past forecast errors in a regression-like model
+  - $q$ is the order of the moving average term
+  - It uses past forecast errors in a regression-like model
 
 **ARIMA(p,d,q) Simplification** <br /> 
 The ARIMA(p, q) model is a simplification where we assume $d$ =0. Thus, the model combines the AR and MA parts without any differencing.
