@@ -222,6 +222,7 @@ plt.legend()
 plt.title('ARIMA Forecast')
 plt.show()
 ```
+
 <img src="images/arima_modeling_viz.png?" width="600" height="300"/>
 <img src="images/arima_modeling_viz_2.png?" width="600" height="300"/>
 <img src="images/arima_modeling_viz_3.png?" width="600" height="300"/>
