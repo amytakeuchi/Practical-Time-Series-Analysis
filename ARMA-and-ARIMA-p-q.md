@@ -306,3 +306,77 @@ It's primarily used to: <br />
 - a) Check if the residuals of a fitted model are independently distributed (i.e., no autocorrelation).
 - b) Assess the adequacy of a time series model.
 - c) Determine if there's any remaining pattern in the residuals that the model hasn't captured.
+
+**Formula:**
+The Ljung-Box Q-statistic is defined as:  <br />
+ <br />
+$Q = n(n+2) * Σ(k=1 to h) [(ρ²ₖ) / (n-k)]$
+ <br />
+Where:
+- $n$ is the sample size
+- $h$ is the number of lags being tested
+- $ρₖ$ is the sample autocorrelation at lag $k$
+```
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from statsmodels.tsa.arima.model import ARIMA
+from statsmodels.stats.diagnostic import acorr_ljungbox
+
+# Set random seed for reproducibility
+np.random.seed(42)
+
+# Generate ARIMA(1,1,1) process
+n_samples = 1000
+ar = np.array([0.6])
+ma = np.array([0.2])
+diff = 1
+
+arima_process = np.random.normal(size=n_samples)
+for t in range(1, n_samples):
+    arima_process[t] += ar[0] * arima_process[t-1] + ma[0] * np.random.normal()
+arima_process = np.cumsum(arima_process)  # integrate
+
+# Create a DataFrame
+df = pd.DataFrame(arima_process, columns=['value'])
+
+# Fit ARIMA model
+model = ARIMA(df['value'], order=(1, 1, 1))
+results = model.fit()
+
+# Get residuals
+residuals = results.resid
+
+# Perform Ljung-Box test
+lb_test = acorr_ljungbox(residuals, lags=[10, 20, 30, 40])
+
+# Print results
+print("Ljung-Box Test Results:")
+print(lb_test)
+
+# Plot residuals
+plt.figure(figsize=(12,6))
+plt.plot(residuals)
+plt.title('Model Residuals')
+plt.xlabel('Time')
+plt.ylabel('Residual Value')
+plt.show()
+
+# Plot Ljung-Box test statistic
+plt.figure(figsize=(12,6))
+plt.plot(lb_test.index, lb_test['lb_stat'])
+plt.title('Ljung-Box Q-statistic')
+plt.xlabel('Lag')
+plt.ylabel('Q-statistic')
+plt.show()
+
+# Plot Ljung-Box p-values
+plt.figure(figsize=(12,6))
+plt.plot(lb_test.index, lb_test['lb_pvalue'])
+plt.axhline(y=0.05, color='r', linestyle='--')
+plt.title('Ljung-Box Test p-values')
+plt.xlabel('Lag')
+plt.ylabel('p-value')
+plt.show()
+```
+ <br />
