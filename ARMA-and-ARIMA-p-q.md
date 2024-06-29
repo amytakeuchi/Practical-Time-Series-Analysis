@@ -127,8 +127,8 @@ ARIMA, which stands for AutoRegressive Integrated Moving Average, is a widely us
 - MA (Moving Average)
 
 **Components**
-- AR(p): The AutoRegressive part involves regressing the variable on its own lagged (past) values. The parameter $p$ indicates the number of lagged observations included in the model.
-- I(d): The Integrated part involves differencing the data to make it stationary (i.e., to remove trends and seasonality). The parameter 
+- **AR(p)**: The AutoRegressive part involves regressing the variable on its own lagged (past) values. The parameter $p$ indicates the number of lagged observations included in the model.
+- **I(d)**: The Integrated part involves differencing the data to make it stationary (i.e., to remove trends and seasonality). The parameter 
   $d$ indicates the number of times the data needs to be differenced.
-- MA(q): The Moving Average part involves modeling the error term as a linear combination of lagged forecast errors. The parameter 
+- **MA(q)**: The Moving Average part involves modeling the error term as a linear combination of lagged forecast errors. The parameter 
   $q$ indicates the number of lagged forecast errors in the model.
