@@ -303,6 +303,6 @@ This modified code adds several new visualizations: <br />
 
 **How is it used in time series analysis?**
 It's primarily used to: <br /> 
-a) Check if the residuals of a fitted model are independently distributed (i.e., no autocorrelation).
-b) Assess the adequacy of a time series model.
-c) Determine if there's any remaining pattern in the residuals that the model hasn't captured.
+- a) Check if the residuals of a fitted model are independently distributed (i.e., no autocorrelation).
+- b) Assess the adequacy of a time series model.
+- c) Determine if there's any remaining pattern in the residuals that the model hasn't captured.
