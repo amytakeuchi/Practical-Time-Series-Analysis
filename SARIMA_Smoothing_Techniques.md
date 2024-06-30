@@ -44,6 +44,7 @@ Where:
 - $(1-B^m)^D$ is the seasonal differencing term
 <img src="images/SARIMA_example.png?" width="600" height="300"/>
 <img src="images/SARIMA_example_2.png?" width="600" height="300"/>
+<br /> 
 ```
 import numpy as np
 import pandas as pd
