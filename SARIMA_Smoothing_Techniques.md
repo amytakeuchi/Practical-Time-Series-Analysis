@@ -222,7 +222,7 @@ plt.show()
 ```
 <img src="images/ses_result.png?" width="600" height="300"/>
 <img src="images/ses_result_2.png?" width="600" height="300"/>
-<img src="images/ses_result_3.png?" width="400" height="400"/>
+<img src="images/ses_result_3.png?" width="400" height="300"/>
 <img src="images/ses_result_4.png?" width="600" height="300"/>
 
 This code does the following: 
@@ -241,3 +241,5 @@ When interpreting the results:
 - Examine the residuals plot: ideally, residuals should be randomly distributed around zero.
 - Check the ACF plot: for a good model, most lags (except lag 0) should be within the confidence bands.
 - Compare forecasts with different α values: a higher α gives more weight to recent observations, while a lower α produces smoother forecasts.
+
+## Double Exponential Smoothing
