@@ -8,6 +8,9 @@
     
 ## SARIMA
 SARIMA (Seasonal AutoRegressive Integrated Moving Average) is an extension of the ARIMA model that incorporates seasonal components in time series data. 
+<img src="images/SARIMA_definition.png?" width="600" height="300"/>
+<img src="images/SARIMA_definition_2.png?" width="600" height="300"/>
+<img src="images/SARIMA_definition_3.png?" width="600" height="300"/>
 <br /> 
 **SARIMA Model:**
 <br /> 
@@ -39,6 +42,8 @@ Where:
 - $Θ(B^m)$ is the seasonal MA term
 - $(1-B)^d$ is the non-seasonal differencing term
 - $(1-B^m)^D$ is the seasonal differencing term
+<img src="images/SARIMA_example.png?" width="600" height="300"/>
+<img src="images/SARIMA_example_2.png?" width="600" height="300"/>
 ```
 import numpy as np
 import pandas as pd
