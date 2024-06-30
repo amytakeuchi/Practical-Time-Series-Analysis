@@ -117,7 +117,7 @@ This code does the following:
 - Forecasts the next 24 periods with confidence intervals.
 - Plots the original data, forecast, and confidence intervals.
 - Shows diagnostic plots for model evaluation.
-<br /> 
+
 When interpreting the results:
 - Check the AIC and BIC in the model summary (lower is generally better).
 - Look at the p-values of the coefficients to see if they're significant.
