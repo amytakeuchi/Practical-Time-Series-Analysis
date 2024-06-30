@@ -361,3 +361,80 @@ When interpreting the results:
 - Examine the residuals plot: ideally, residuals should be randomly distributed around zero.
 - Check the ACF plot: for a good model, most lags (except lag 0) should be within the confidence bands.
 - Compare forecasts with different α and β values: higher values give more weight to recent observations and trends, while lower values produce smoother forecasts.
+
+## Triple Exponential Smoothing (TES) and Holt-Winters method
+**Triple Exponential Smoothing (TES) and Holt-Winters Method:**
+These are advanced time series forecasting techniques that capture three components of a time series:
+- Level (average)
+- Trend (increasing or decreasing pattern)
+- Seasonality (repeating patterns at fixed intervals)
+
+The Holt-Winters method is a specific implementation of Triple Exponential Smoothing.
+
+**Use in Time Series Analysis:**
+These methods are used for forecasting when the time series exhibits both trend and seasonality. They're particularly useful for:
+- Sales forecasting
+- Demand prediction
+- Stock market analysis
+- Weather forecasting
+
+**Formulas:**
+The Holt-Winters method has two variations: Additive and Multiplicative. I'll provide the formulas for the Additive method:
+- Level: $Lt = α(Yt - St-m) + (1 - α)(Lt-1 + Tt-1)$
+- Trend: $Tt = β(Lt - Lt-1) + (1 - β)Tt-1$
+- Seasonal: $St = γ(Yt - Lt) + (1 - γ)St-m$
+- Forecast: $Ft+h = Lt + hTt + St-m+h$
+
+Where:
+- $Yt$ is the observed value at time t
+- $Lt$ is the level at time t
+- $Tt$ is the trend at time t
+- $St$ is the seasonal component at time t
+- $Ft+h$ is the forecast for h periods ahead
+- $m$ is the number of periods in a seasonal cycle
+- $α, β, γ$ are smoothing parameters ($0 < α, β, γ < 1$)
+
+```
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from statsmodels.tsa.holtwinters import ExponentialSmoothing
+
+# Generate sample data
+np.random.seed(0)
+date_rng = pd.date_range(start='2020-01-01', end='2022-12-31', freq='D')
+n = len(date_rng)
+trend = np.linspace(0, 5, n)
+seasonal = np.sin(np.linspace(0, 8*np.pi, n))
+noise = np.random.normal(0, 0.5, n)
+y = trend + seasonal + noise
+
+# Create DataFrame
+df = pd.DataFrame(data={'date': date_rng, 'value': y})
+df.set_index('date', inplace=True)
+
+# Fit Holt-Winters model
+model = ExponentialSmoothing(df['value'], 
+                             seasonal_periods=365, 
+                             trend='add', 
+                             seasonal='add')
+fitted_model = model.fit()
+
+# Make predictions
+forecast = fitted_model.forecast(steps=365)
+
+# Plot results
+plt.figure(figsize=(12,6))
+plt.plot(df.index, df['value'], label='Observed')
+plt.plot(fitted_model.fittedvalues.index, fitted_model.fittedvalues, label='Fitted')
+plt.plot(forecast.index, forecast, label='Forecast')
+plt.legend()
+plt.title('Holt-Winters Triple Exponential Smoothing')
+plt.show()
+
+# Print model parameters
+print("Model Parameters:")
+print(f"Alpha (level): {fitted_model.params['smoothing_level']:.4f}")
+print(f"Beta (trend): {fitted_model.params['smoothing_trend']:.4f}")
+print(f"Gamma (seasonal): {fitted_model.params['smoothing_seasonal']:.4f}")
+```
