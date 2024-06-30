@@ -154,3 +154,85 @@ $F_(t+1) = S_t$
 <br /> 
 <br /> 
 Where $F_(t+1)$ is the forecast for the next period.
+
+```
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from statsmodels.tsa.holtwinters import SimpleExpSmoothing
+from sklearn.metrics import mean_squared_error
+from math import sqrt
+
+# Generate sample data
+np.random.seed(0)
+dates = pd.date_range(start='2020-01-01', periods=100, freq='D')
+y = np.random.normal(loc=100, scale=10, size=100)
+df = pd.DataFrame({'y': y}, index=dates)
+
+# Split data into train and test sets
+train = df[:80]
+test = df[80:]
+
+# Fit Simple Exponential Smoothing model
+model = SimpleExpSmoothing(train['y'])
+fit = model.fit(smoothing_level=0.2, optimized=False)
+
+# Make predictions
+forecast = fit.forecast(len(test))
+
+# Calculate RMSE
+rmse = sqrt(mean_squared_error(test['y'], forecast))
+print(f'RMSE: {rmse}')
+
+# Plot results
+plt.figure(figsize=(12,6))
+plt.plot(train.index, train['y'], label='Train')
+plt.plot(test.index, test['y'], label='Test')
+plt.plot(test.index, forecast, label='Forecast')
+plt.legend()
+plt.title('Simple Exponential Smoothing')
+plt.show()
+
+# Plot residuals
+residuals = test['y'] - forecast
+plt.figure(figsize=(12,6))
+plt.plot(test.index, residuals)
+plt.axhline(y=0, color='r', linestyle='--')
+plt.title('Forecast Residuals')
+plt.show()
+
+# Plot ACF of residuals
+from statsmodels.graphics.tsaplots import plot_acf
+plot_acf(residuals)
+plt.title('ACF of Residuals')
+plt.show()
+
+# Try different smoothing parameters
+alphas = [0.1, 0.3, 0.5, 0.7, 0.9]
+plt.figure(figsize=(12,6))
+for alpha in alphas:
+    fit = model.fit(smoothing_level=alpha, optimized=False)
+    forecast = fit.forecast(len(test))
+    plt.plot(test.index, forecast, label=f'Alpha {alpha}')
+plt.plot(train.index, train['y'], label='Train')
+plt.plot(test.index, test['y'], label='Test')
+plt.legend()
+plt.title('Simple Exponential Smoothing with Different Alphas')
+plt.show()
+```
+This code does the following: 
+- Generates a sample time series without clear trend or seasonality.
+- Splits the data into training and test sets.
+- Fits a Simple Exponential Smoothing model with α = 0.2.
+- Makes predictions on the test set.
+- Calculates and prints the Root Mean Square Error (RMSE).
+- Plots the original data, test data, and forecast.
+- Plots the forecast residuals.
+- Plots the Autocorrelation Function (ACF) of the residuals.
+- Tries different smoothing parameters (α) and plots the results.
+
+When interpreting the results:
+- Look at the RMSE to assess forecast accuracy.
+- Examine the residuals plot: ideally, residuals should be randomly distributed around zero.
+- Check the ACF plot: for a good model, most lags (except lag 0) should be within the confidence bands.
+- Compare forecasts with different α values: a higher α gives more weight to recent observations, while a lower α produces smoother forecasts.
