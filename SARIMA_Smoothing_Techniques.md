@@ -7,7 +7,7 @@
   - Holt Winters for trends
     
 ## SARIMA
-SARIMA (Seasonal AutoRegressive Integrated Moving Average) is an extension of the ARIMA model that incorporates seasonal components in time series data. 
+SARIMA (Seasonal AutoRegressive Integrated Moving Average) is an extension of the ARIMA model that incorporates seasonal components in time series data. <br /> 
 <img src="images/SARIMA_definition.png?" width="600" height="300"/>
 <img src="images/SARIMA_definition_2.png?" width="600" height="300"/>
 <img src="images/SARIMA_definition_3.png?" width="600" height="300"/>
@@ -339,3 +339,25 @@ plt.legend()
 plt.title('Double Exponential Smoothing with Different Parameters')
 plt.show()
 ```
+<img src="images/des_result.png?" width="600" height="300"/>
+<img src="images/des_result_2.png?" width="600" height="300"/>
+<img src="images/des_result_3.png?" width="400" height="300"/>
+<img src="images/des_result_4.png?" width="600" height="300"/>
+
+
+This code does the following:
+- Generates a sample time series with a trend.
+- Splits the data into training and test sets.
+- Fits a Double Exponential Smoothing model with α = 0.2 and β = 0.1.
+- Makes predictions on the test set.
+- Calculates and prints the Root Mean Square Error (RMSE).
+- Plots the original data, test data, and forecast.
+- Plots the forecast residuals.
+- Plots the Autocorrelation Function (ACF) of the residuals.
+- Tries different combinations of smoothing parameters (α and β) and plots the results.
+
+When interpreting the results:
+- Look at the RMSE to assess forecast accuracy.
+- Examine the residuals plot: ideally, residuals should be randomly distributed around zero.
+- Check the ACF plot: for a good model, most lags (except lag 0) should be within the confidence bands.
+- Compare forecasts with different α and β values: higher values give more weight to recent observations and trends, while lower values produce smoother forecasts.
