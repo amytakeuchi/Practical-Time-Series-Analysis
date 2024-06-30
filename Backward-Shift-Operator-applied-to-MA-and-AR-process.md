@@ -145,6 +145,8 @@ print(df.head())
 ```
 <img src="images/bso_timeseries.png?" width="900" height="450"/>
 
+### Backward Shift Operator
+
 ## Intro to Invertibility
 <img src="images/invertibility_definition.png?" width="600" height="300"/>
 
