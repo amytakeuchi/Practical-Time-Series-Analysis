@@ -106,8 +106,8 @@ plt.show()
 <img src="images/SARIMA_results_3.png?" width="500" height="300"/>
 <img src="images/SARIMA_results_4.png?" width="600" height="300"/>
 <img src="images/SARIMA_results_5.png?" width="600" height="400"/>
-<br /> 
-This code does the following: <br /> 
+
+This code does the following: 
 - Generates a simulated seasonal time series with trend, seasonality, and noise.
 - Plots the original data, ACF, and PACF.
 - Fits a SARIMA(1,1,1)(1,1,1,12) model. This means:
