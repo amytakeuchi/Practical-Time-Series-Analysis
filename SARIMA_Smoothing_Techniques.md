@@ -106,3 +106,32 @@ plt.show()
 <img src="images/SARIMA_results_3.png?" width="500" height="300"/>
 <img src="images/SARIMA_results_4.png?" width="600" height="300"/>
 <img src="images/SARIMA_results_5.png?" width="600" height="400"/>
+
+## Simple Exponential Smoothing
+Exponential Smoothing (SES) is a time series forecasting method for data **without clear trend or seasonality.**
+
+**What is Simple Exponential Smoothing?**
+SES is a weighted average forecasting method that applies exponentially decreasing weights to older observations. It's particularly useful for forecasting data where there's no clear trend or seasonal pattern.
+
+**How to use SES in time series analysis:**
+- Use it for short-term forecasting of time series without trend or seasonality
+- Choose an appropriate smoothing parameter (α)
+- Apply the method to generate forecasts
+- Evaluate the forecast accuracy
+
+**Formula** <br /> 
+<br /> 
+$S_t = α * Y_t + (1 - α) * S_(t-1)$ <br /> 
+<br /> 
+Where:
+- $S_t$ is the smoothed value at time t
+- $Y_t$ is the observed value at time t
+- $α$ is the smoothing parameter (0 < α ≤ 1)
+- $S_(t-1)$ is the previous smoothed value
+
+For forecasting: <br /> 
+<br /> 
+$F_(t+1) = S_t$
+<br /> 
+<br /> 
+Where $F_(t+1)$ is the forecast for the next period.
