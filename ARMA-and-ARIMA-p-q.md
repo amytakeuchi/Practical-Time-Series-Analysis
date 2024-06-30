@@ -380,3 +380,7 @@ plt.ylabel('p-value')
 plt.show()
 ```
  <br />
+ 
+<img src="images/ljung_box_results.png?" width="600" height="300"/>
+<img src="images/ljung_box_results_2.png?" width="600" height="300"/>
+<img src="images/ljung_box_results_3.png?" width="600" height="300"/>
