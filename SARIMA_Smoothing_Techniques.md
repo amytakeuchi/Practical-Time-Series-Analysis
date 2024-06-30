@@ -257,8 +257,8 @@ It's a forecasting method for time series data that have a trend but no seasonal
 **Formula:**
 The basic formulas for Double Exponential Smoothing are: <br /> 
 <br /> 
-Level: $L_t = α * Y_t + (1 - α) * (L_(t-1) + b_(t-1))$
-Trend: $b_t = β * (L_t - L_(t-1)) + (1 - β) * b_(t-1)$
+Level: $L_t = α * Y_t + (1 - α) * (L_(t-1) + b_(t-1))$ <br />
+Trend: $b_t = β * (L_t - L_(t-1)) + (1 - β) * b_(t-1)$ <br />
 Forecast: $F_(t+m) = L_t + m * b_t$
 <br /> 
 <br /> 
@@ -269,3 +269,73 @@ Where:
 - $α$ is the smoothing parameter for the level $(0 < α ≤ 1)$
 - $β$ is the smoothing parameter for the trend $(0 < β ≤ 1)$
 - $F_(t+m)$ is the m-step ahead forecast
+
+```
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from statsmodels.tsa.holtwinters import ExponentialSmoothing
+from sklearn.metrics import mean_squared_error
+from math import sqrt
+
+# Generate sample data with trend
+np.random.seed(0)
+dates = pd.date_range(start='2020-01-01', periods=100, freq='D')
+trend = np.linspace(0, 10, 100)
+noise = np.random.normal(0, 1, 100)
+y = trend + noise
+df = pd.DataFrame({'y': y}, index=dates)
+
+# Split data into train and test sets
+train = df[:80]
+test = df[80:]
+
+# Fit Double Exponential Smoothing model
+model = ExponentialSmoothing(train['y'], trend='add')
+fit = model.fit(smoothing_level=0.2, smoothing_trend=0.1, optimized=False)
+
+# Make predictions
+forecast = fit.forecast(len(test))
+
+# Calculate RMSE
+rmse = sqrt(mean_squared_error(test['y'], forecast))
+print(f'RMSE: {rmse}')
+
+# Plot results
+plt.figure(figsize=(12,6))
+plt.plot(train.index, train['y'], label='Train')
+plt.plot(test.index, test['y'], label='Test')
+plt.plot(test.index, forecast, label='Forecast')
+plt.legend()
+plt.title('Double Exponential Smoothing')
+plt.show()
+
+# Plot residuals
+residuals = test['y'] - forecast
+plt.figure(figsize=(12,6))
+plt.plot(test.index, residuals)
+plt.axhline(y=0, color='r', linestyle='--')
+plt.title('Forecast Residuals')
+plt.show()
+
+# Plot ACF of residuals
+from statsmodels.graphics.tsaplots import plot_acf
+plot_acf(residuals)
+plt.title('ACF of Residuals')
+plt.show()
+
+# Try different smoothing parameters
+alphas = [0.1, 0.3, 0.5, 0.7, 0.9]
+betas = [0.1, 0.3, 0.5, 0.7, 0.9]
+plt.figure(figsize=(12,6))
+for alpha in alphas:
+    for beta in betas:
+        fit = model.fit(smoothing_level=alpha, smoothing_trend=beta, optimized=False)
+        forecast = fit.forecast(len(test))
+        plt.plot(test.index, forecast, label=f'Alpha {alpha}, Beta {beta}')
+plt.plot(train.index, train['y'], label='Train')
+plt.plot(test.index, test['y'], label='Test')
+plt.legend()
+plt.title('Double Exponential Smoothing with Different Parameters')
+plt.show()
+```
