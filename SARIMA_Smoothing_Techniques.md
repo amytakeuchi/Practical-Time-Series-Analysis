@@ -243,3 +243,29 @@ When interpreting the results:
 - Compare forecasts with different α values: a higher α gives more weight to recent observations, while a lower α produces smoother forecasts.
 
 ## Double Exponential Smoothing
+Double Exponential Smoothing, also known as Holt's linear trend method, is an extension of Simple Exponential Smoothing that can **handle time series data with a trend.** 
+
+**What is Double Exponential Smoothing?** <br /> 
+It's a forecasting method for time series data that have a trend but no seasonality. It uses two smoothing parameters: **one for the level and one for the trend.**
+
+**How to use Double Exponential Smoothing in time series analysis:**
+- Use it for short to medium-term forecasting of time series with a trend
+- Choose appropriate smoothing parameters for level (α) and trend (β)
+- Apply the method to generate forecasts
+- Evaluate the forecast accuracy
+
+**Formula:**
+The basic formulas for Double Exponential Smoothing are: <br /> 
+<br /> 
+Level: $L_t = α * Y_t + (1 - α) * (L_(t-1) + b_(t-1))$
+Trend: $b_t = β * (L_t - L_(t-1)) + (1 - β) * b_(t-1)$
+Forecast: $F_(t+m) = L_t + m * b_t$
+<br /> 
+<br /> 
+Where:
+- $L_t$ is the level at time $t$
+- $b_t$ is the trend at time $t$
+- $Y_t$ is the observed value at time $t$
+- $α$ is the smoothing parameter for the level $(0 < α ≤ 1)$
+- $β$ is the smoothing parameter for the trend $(0 < β ≤ 1)$
+- $F_(t+m)$ is the m-step ahead forecast
