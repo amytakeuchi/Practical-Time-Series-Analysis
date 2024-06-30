@@ -438,3 +438,13 @@ print(f"Alpha (level): {fitted_model.params['smoothing_level']:.4f}")
 print(f"Beta (trend): {fitted_model.params['smoothing_trend']:.4f}")
 print(f"Gamma (seasonal): {fitted_model.params['smoothing_seasonal']:.4f}")
 ```
+<img src="images/tes_result.png?" width="600" height="300"/>
+
+This code:
+- Generates synthetic daily data with trend and seasonality
+- Fits a Holt-Winters model using additive trend and seasonality
+- Makes a forecast for the next year
+- Plots the original data, fitted values, and forecast
+- Prints the optimized smoothing parameters
+
+The resulting plot will show how well the model captures the trend and seasonality of the data and makes future predictions.
