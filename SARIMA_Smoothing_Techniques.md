@@ -107,7 +107,7 @@ plt.show()
 <img src="images/SARIMA_results_4.png?" width="600" height="300"/>
 <img src="images/SARIMA_results_5.png?" width="600" height="400"/>
 <br /> 
-This code does the following:
+This code does the following: <br /> 
 - Generates a simulated seasonal time series with trend, seasonality, and noise.
 - Plots the original data, ACF, and PACF.
 - Fits a SARIMA(1,1,1)(1,1,1,12) model. This means:
@@ -117,7 +117,7 @@ This code does the following:
 - Forecasts the next 24 periods with confidence intervals.
 - Plots the original data, forecast, and confidence intervals.
 - Shows diagnostic plots for model evaluation.
-
+<br /> 
 When interpreting the results:
 - Check the AIC and BIC in the model summary (lower is generally better).
 - Look at the p-values of the coefficients to see if they're significant.
