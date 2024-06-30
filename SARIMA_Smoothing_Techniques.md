@@ -220,6 +220,11 @@ plt.legend()
 plt.title('Simple Exponential Smoothing with Different Alphas')
 plt.show()
 ```
+<img src="images/ses_result.png?" width="600" height="300"/>
+<img src="images/ses_result_2.png?" width="600" height="300"/>
+<img src="images/ses_result_3.png?" width="400" height="400"/>
+<img src="images/ses_result_4.png?" width="600" height="300"/>
+
 This code does the following: 
 - Generates a sample time series without clear trend or seasonality.
 - Splits the data into training and test sets.
