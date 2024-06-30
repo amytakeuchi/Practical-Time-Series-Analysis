@@ -148,7 +148,7 @@ print(df.head())
 ```
 <img src="images/bso_timeseries.png?" width="950" height="500"/>
 
-### Backward Shift Operator Examples
+### Backward Shift Operator Examples 
 <img src="images/bso_example.png?" width="600" height="300"/>
 <img src="images/bso_example_2.png?" width="600" height="300"/>
 <img src="images/bso_example_3.png?" width="600" height="300"/>
@@ -163,8 +163,8 @@ print(df.head())
 - **Application**: It's particularly important for MA processes. An invertible MA process can be approximated by an AR process of infinite order.
 - **Condition**: For an MA(1) process Yt = εt + θεt-1, the process is invertible if |θ| < 1.
 
-**Illustrating Inverting**
-<img src="images/inverting.png?" width="400" height="300"/>
+**Illustrating Inverting** <br /> 
+<img src="images/inverting.png?" width="400" height="200"/>
 <img src="images/inverting_2.png?" width="600" height="300"/>
 <img src="images/inverting_3.png?" width="600" height="200"/>
 <img src="images/inverting_4.png?" width="600" height="300"/>
