@@ -301,7 +301,7 @@ This modified code adds several new visualizations: <br />
 <img src="images/ljung_box_definition.png?" width="500" height="300"/>
 <img src="images/ljung_box_definition_2.png?" width="500" height="200"/>
 <img src="images/ljung_box_definition_3.png?" width="500" height="300"/>
-<img src="images/ljung_box_definition_4.png?" width="500" height="300"/>
+<img src="images/ljung_box_definition_4.png?" width="500" height="200"/>
 
 **What is Ljung-Box Q-statistic?**
 - The Ljung-Box Q-statistic is a test statistic used to check **whether a group of autocorrelations of the residuals are significantly different from zero.** In other words, it tests for the presence of serial correlation in the residuals of a fitted time series model.
