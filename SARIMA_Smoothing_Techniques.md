@@ -95,3 +95,4 @@ results.plot_diagnostics(figsize=(12, 8))
 plt.show()
 ```
 <br /> 
+<img src="images/.png?" width="600" height="300"/>
