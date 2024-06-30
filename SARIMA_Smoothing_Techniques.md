@@ -106,6 +106,24 @@ plt.show()
 <img src="images/SARIMA_results_3.png?" width="500" height="300"/>
 <img src="images/SARIMA_results_4.png?" width="600" height="300"/>
 <img src="images/SARIMA_results_5.png?" width="600" height="400"/>
+This code does the following:
+- Generates a simulated seasonal time series with trend, seasonality, and noise.
+- Plots the original data, ACF, and PACF.
+- Fits a SARIMA(1,1,1)(1,1,1,12) model. This means:
+  - Non-seasonal components: AR(1), differencing(1), MA(1)
+  - Seasonal components: SAR(1), seasonal differencing(1), SMA(1), with a season length of 12
+- Prints the model summary.
+- Forecasts the next 24 periods with confidence intervals.
+- Plots the original data, forecast, and confidence intervals.
+- Shows diagnostic plots for model evaluation.
+
+When interpreting the results:
+- Check the AIC and BIC in the model summary (lower is generally better).
+- Look at the p-values of the coefficients to see if they're significant.
+- Examine the diagnostic plots:
+- Standardized residuals should look like white noise.
+- The Q-Q plot should follow the diagonal line.
+- The correlogram should show no significant correlations.
 
 ## Simple Exponential Smoothing
 Exponential Smoothing (SES) is a time series forecasting method for data **without clear trend or seasonality.**
