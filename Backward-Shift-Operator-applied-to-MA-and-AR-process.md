@@ -143,7 +143,7 @@ plt.show()
 # Print first few rows
 print(df.head())
 ```
-
+<img src="images/bso_timeseries.png?" width="600" height="300"/>
 
 ### Backward Shift Operator Examples
 <img src="images/bso_example.png?" width="600" height="300"/>
