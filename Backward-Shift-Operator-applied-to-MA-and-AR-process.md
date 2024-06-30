@@ -143,9 +143,14 @@ plt.show()
 # Print first few rows
 print(df.head())
 ```
-<img src="images/bso_timeseries.png?" width="900" height="450"/>
 
-### Backward Shift Operator
+
+### Backward Shift Operator Examples
+<img src="images/bso_example.png?" width="600" height="300"/>
+<img src="images/bso_example_2.png?" width="600" height="300"/>
+<img src="images/bso_example_3.png?" width="600" height="300"/>
+<img src="images/bso_example_4.png?" width="600" height="300"/>
+<img src="images/bso_example_5.png?" width="600" height="300"/>
 
 ## Intro to Invertibility
 <img src="images/invertibility_definition.png?" width="600" height="300"/>
