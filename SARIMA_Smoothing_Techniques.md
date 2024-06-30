@@ -97,6 +97,6 @@ plt.show()
 <br /> 
 <img src="images/SARIMA_results.png?" width="600" height="300"/>
 <img src="images/SARIMA_results_2.png?" width="600" height="400"/>
-<img src="images/SARIMA_results_3.png?" width="500" height="400"/>
+<img src="images/SARIMA_results_3.png?" width="500" height="300"/>
 <img src="images/SARIMA_results_4.png?" width="600" height="300"/>
 <img src="images/SARIMA_results_5.png?" width="600" height="400"/>
