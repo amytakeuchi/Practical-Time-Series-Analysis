@@ -16,7 +16,7 @@ SARIMA (Seasonal AutoRegressive Integrated Moving Average) is an extension of th
 <br /> 
 SARIMA(p,d,q)(P,D,Q)m
 <br /> 
-Where:
+Where: 
 - (p,d,q) are the non-seasonal parameters
 - (P,D,Q) are the seasonal parameters
 - m is the number of periods per season
@@ -28,7 +28,7 @@ Where:
 - Fit the model and check diagnostics
 - Use for forecasting
 
-*Formula:*
+**Formula:** <br /> 
 The general form of a SARIMA model combines the non-seasonal and seasonal components: <br /> 
 <br /> 
 $Φ(B^m)φ(B)(1-B)^d(1-B^m)^D y_t = θ(B)Θ(B^m)ε_t$
@@ -129,7 +129,7 @@ When interpreting the results:
 ## Simple Exponential Smoothing
 Exponential Smoothing (SES) is a time series forecasting method for data **without clear trend or seasonality.**
 
-**What is Simple Exponential Smoothing?**
+**What is Simple Exponential Smoothing?** <br /> 
 SES is a weighted average forecasting method that applies exponentially decreasing weights to older observations. It's particularly useful for forecasting data where there's no clear trend or seasonal pattern.
 
 **How to use SES in time series analysis:**
@@ -254,7 +254,7 @@ It's a forecasting method for time series data that have a trend but no seasonal
 - Apply the method to generate forecasts
 - Evaluate the forecast accuracy
 
-**Formula:**
+**Formula:** <br /> 
 The basic formulas for Double Exponential Smoothing are: <br /> 
 <br /> 
 Level: $L_t = α * Y_t + (1 - α) * (L_(t-1) + b_(t-1))$ <br />
@@ -363,22 +363,22 @@ When interpreting the results:
 - Compare forecasts with different α and β values: higher values give more weight to recent observations and trends, while lower values produce smoother forecasts.
 
 ## Triple Exponential Smoothing (TES) and Holt-Winters method
-**Triple Exponential Smoothing (TES) and Holt-Winters Method:**
+**Triple Exponential Smoothing (TES) and Holt-Winters Method:** <br /> 
 These are advanced time series forecasting techniques that capture three components of a time series:
 - Level (average)
 - Trend (increasing or decreasing pattern)
 - Seasonality (repeating patterns at fixed intervals)
 
-The Holt-Winters method is a specific implementation of Triple Exponential Smoothing.
+The Holt-Winters method is a specific implementation of Triple Exponential Smoothing. <br /> 
 
-**Use in Time Series Analysis:**
+**Use in Time Series Analysis:** <br /> 
 These methods are used for forecasting when the time series exhibits both trend and seasonality. They're particularly useful for:
 - Sales forecasting
 - Demand prediction
 - Stock market analysis
 - Weather forecasting
 
-**Formulas:**
+**Formulas:** <br /> 
 The Holt-Winters method has two variations: Additive and Multiplicative. I'll provide the formulas for the Additive method:
 - Level: $Lt = α(Yt - St-m) + (1 - α)(Lt-1 + Tt-1)$
 - Trend: $Tt = β(Lt - Lt-1) + (1 - β)Tt-1$
