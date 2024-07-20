@@ -5,9 +5,9 @@ AIC is a measure of the relative quality of statistical models for a given set o
 
 ## How is AIC used in time series analysis?
 In time series analysis, AIC is primarily used for:  <br /> 
-  a) Selecting the optimal order of ARIMA (Autoregressive Integrated Moving Average) models <br /> 
-  b) Comparing different models (e.g., AR vs MA vs ARMA) <br /> 
-  c) Balancing model complexity with goodness of fit <br /> 
+  - a) Selecting the optimal order of ARIMA (Autoregressive Integrated Moving Average) models <br /> 
+  - b) Comparing different models (e.g., AR vs MA vs ARMA) <br /> 
+  - c) Balancing model complexity with goodness of fit <br /> 
 The model with the lowest AIC is generally preferred.  <br /> 
 
 ## Formula
