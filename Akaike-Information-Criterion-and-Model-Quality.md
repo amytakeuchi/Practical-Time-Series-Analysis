@@ -13,6 +13,7 @@ The model with the lowest AIC is generally preferred.  <br />
 ## Formula
 The general formula for AIC is: <br /> 
 $AIC = 2k - 2ln(L)$
+<br /> 
 Where: <br /> 
 - $k$ is the number of parameters in the model
 - $L$ is the maximum value of the likelihood function for the model
